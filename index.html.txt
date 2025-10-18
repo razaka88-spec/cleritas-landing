@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cleritas Pharma</title>
+  <style>
+    body{font-family:Inter, "Helvetica Neue", Arial, sans-serif;background:#f6f8fa;color:#111;min-height:100vh;display:flex;align-items:center;justify-content:center;margin:0;padding:2rem}
+    .card{max-width:900px;border-radius:14px;padding:2.2rem 2.6rem;background:white;box-shadow:0 8px 30px rgba(16,24,40,0.06);text-align:left}
+    h1{margin:0 0 .25rem;font-size:1.6rem;letter-spacing:.02em}
+    p.lead{margin:0 0 1rem;color:#475569;font-size:1.05rem;line-height:1.45}
+    .contact{margin-top:1rem;font-size:.98rem;color:#0b61c6}
+    .small{margin-top:1.25rem;color:#68707d;font-size:.88rem}
+    a{color:inherit;text-decoration:underline}
+    @media (max-width:640px){.card{padding:1.2rem}}
+  </style>
+</head>
+<body>
+  <div class="card" role="main">
+    <h1>Cleritas Pharma</h1>
+    <p class="lead">
+      We’re building a meaningful in healthcare development. 
+      The site is under construction — expected launch soon.
+    </p>
+
+    <p class="contact">
+      For enquiries: <a href="mailto:info@cleritaspharma.com">info@cleritaspharma.com</a>
+    </p>
+
+    <p class="small">© <span id="yr"></span> Cleritas Pharma</p>
+  </div>
+
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
