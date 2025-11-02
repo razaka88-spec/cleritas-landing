@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cleritas Pharma</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="brand">
+      <div class="logo-mark" aria-hidden="true">
+        <!-- simple C droplet -->
+        <svg width="44" height="44" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0" stop-color="#2D6AE3"/>
+              <stop offset="1" stop-color="#F9B930"/>
+            </linearGradient>
+          </defs>
+          <path d="M50 6c12 18 28 33 28 49 0 20-16 36-36 36S6 75 6 55 27 24 50 6z" fill="url(#g)"/>
+          <path d="M35 60c6 6 24 6 30 0 6-6 6-16 0-22-6-6-24-6-30 0-6 6-6 16 0 22z" fill="#fff" opacity="0.95"/>
+        </svg>
+      </div>
+      <div class="brand-text">
+        <div class="name">CLERITAS <span class="small">pharma</span></div>
+      </div>
+    </div>
+
+    <nav class="controls">
+      <a class="nav-link" href="#products" data-lang="en">Products</a>
+      <a class="nav-link" href="#about" data-lang="en">About</a>
+      <a class="nav-link" href="#contact" data-lang="en">Contact</a>
+
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <button id="lang-en" class="lang active" data-lang="en">EN</button>
+        <button id="lang-so" class="lang" data-lang="so">SO</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-left">
+        <h1 data-en>Clear choices for better health.</h1>
+        <h1 data-so style="display:none">Xulasho cad oo caafimaad wanaagsan.</h1>
+
+        <p class="lead" data-en>Vitamins formulated for Women, Men and Children — labelled in Somali and English.</p>
+        <p class="lead" data-so style="display:none">Fiitamiino loo sameeyey Haweenka, Ragga iyo Carruurta — calaamadeysan af Soomaali iyo Ingiriis.</p>
+
+        <div class="cta-row">
+          <a href="#products" class="btn primary" data-en>Shop Vitamins</a>
+          <a href="#products" class="btn outline" data-so style="display:none">Dukaameyso Fiitamiino</a>
+          <a href="#about" class="btn ghost" data-en>Learn more</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-card">
+          <div class="pill-rows">
+            <div class="pill pill-women">Women</div>
+            <div class="pill pill-children">Kids</div>
+            <div class="pill pill-men">Men</div>
+          </div>
+          <div class="hero-illustration">
+            <!-- decorative -->
+            <svg width="320" height="200" viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg">
+              <rect x="0" y="0" width="320" height="200" rx="12" fill="#fff"/>
+              <text x="160" y="110" text-anchor="middle" font-size="20" fill="#ccc">VITAMINS</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="grid">
+      <article class="card">
+        <h3 data-en>Women — Iron & Folic</h3>
+        <h3 data-so style="display:none">Haween — Birta & Folic</h3>
+        <p data-en>Support for pregnancy and daily vitality.</p>
+        <p data-so style="display:none">Taageer uurka iyo firfircoonida maalinlaha.</p>
+        <a class="btn small" href="#" data-en>Learn</a>
+        <a class="btn small" href="#" data-so style="display:none">Wax badan</a>
+      </article>
+
+      <article class="card">
+        <h3 data-en>Men — Energy & Vitality</h3>
+        <h3 data-so style="display:none">Rag — Tamarta & Dhalinyarnimo</h3>
+        <p data-en>Balanced B-complex and minerals for active lives.</p>
+        <p data-so style="display:none">B-complex iyo macdano isku dheelitiran nolosha firfircoon.</p>
+        <a class="btn small" href="#" data-en>Learn</a>
+        <a class="btn small" href="#" data-so style="display:none">Wax badan</a>
+      </article>
+
+      <article class="card">
+        <h3 data-en>Children — Growth & Immunity</h3>
+        <h3 data-so style="display:none">Carruur — Koboc & Difaac</h3>
+        <p data-en>Delicious syrup or chewables to support growth.</p>
+        <p data-so style="display:none">Syrup ama lagu nuugo si ay uga caawiso koboca.</p>
+        <a class="btn small" href="#" data-en>Learn</a>
+        <a class="btn small" href="#" data-so style="display:none">Wax badan</a>
+      </article>
+    </section>
+
+    <section id="about" class="about">
+      <div>
+        <h2 data-en>About Cleritas Pharma</h2>
+        <h2 data-so style="display:none">Ku saabsan Cleritas Pharma</h2>
+        <p data-en>We provide clear, trustworthy vitamin labeling in Somali and English — affordable for families.</p>
+        <p data-so style="display:none">Waxaan bixinaa calaamadeyn fiitamiino oo cad oo lagu kalsoonaan karo af Soomaali iyo Ingiriis — qiimo jaban oo qoyska ku habboon.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h3 data-en>Contact</h3>
+      <h3 data-so style="display:none">Nala soo xiriir</h3>
+      <p data-en>Email: info@cleritaspharma.com</p>
+      <p data-so style="display:none">Email: info@cleritaspharma.com</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>© Cleritas Pharma <span id="year"></span></small>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
