@@ -3,49 +3,46 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Cleritas Pharma — Vitamins & Supplements</title>
+  <title>Cleritas Pharma — Clear labels, trusted vitamins</title>
   <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Cleritas Pharma — Somali/English vitamin labels for women, men and children. Clear dosing, batch and expiry info.">
 </head>
 <body>
-  <!-- Top banner -->
   <div class="top-banner" id="top-banner">
     <div class="banner-inner">
-      <strong data-en>Now shipping to Somalia — clear Somali & English labels.</strong>
-      <strong data-so style="display:none">Hadda waxaan ka rarnaa Soomaaliya — calaamado cad oo Soomaali & Ingiriis ah.</strong>
+      <strong data-en>Now shipping to Somalia — bilingual Somali & English labels.</strong>
+      <strong data-so style="display:none">Hadda waxaan ka rarnaa Soomaaliya — calaamado af Soomaali & Ingiriis ah.</strong>
       <button id="banner-close" aria-label="Close banner">×</button>
     </div>
   </div>
 
-  <!-- Header / Logo / Nav -->
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="#">
-        <!-- Serious logo (SVG) -->
-        <svg class="logo" viewBox="0 0 200 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+      <a class="brand" href="index.html" aria-label="Cleritas Pharma home">
+        <svg class="logo" viewBox="0 0 220 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
           <defs>
             <linearGradient id="lg1" x1="0" x2="1">
               <stop offset="0" stop-color="#0B3D91"/>
               <stop offset="1" stop-color="#2D6AE3"/>
             </linearGradient>
           </defs>
-          <!-- shield mark -->
           <g transform="translate(0,4)">
-            <path d="M18 2c7 0 12 4 12 9v8c0 5-5 9-12 9S6 24 6 19V11c0-5 5-9 12-9z" fill="url(#lg1)"/>
-            <path d="M18 6c3 0 6 2 6 5v6c0 3-3 5-6 5s-6-2-6-5v-6c0-3 3-5 6-5z" fill="#fff" opacity="0.9"/>
-            <text x="36" y="23" font-family="Segoe UI, Roboto, Arial" font-size="16" font-weight="700" fill="#071A2F">CLERITAS</text>
-            <text x="36" y="36" font-family="Segoe UI, Roboto, Arial" font-size="10" fill="#556175">PHARMA</text>
+            <path d="M20 2c8 0 14 5 14 11v9c0 6-6 11-14 11S6 28 6 22V13c0-6 6-11 14-11z" fill="url(#lg1)"/>
+            <path d="M20 6c3 0 6 2 6 5v7c0 3-3 5-6 5s-6-2-6-5v-7c0-3 3-5 6-5z" fill="#fff" opacity="0.95"/>
+            <text x="44" y="23" font-family="Poppins, system-ui, sans-serif" font-size="16" font-weight="700" fill="#071A2F">CLERITAS</text>
+            <text x="44" y="36" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#556175">PHARMA</text>
           </g>
         </svg>
       </a>
 
-      <nav class="main-nav">
-        <a href="#products" class="nav-link" data-en>Products</a>
-        <a href="#about" class="nav-link" data-en>About</a>
-        <a href="#order" class="nav-link" data-en>Order</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="nav-link" href="#products" data-en>Products</a>
+        <a class="nav-link" href="#about" data-en>About</a>
+        <a class="nav-link" href="order.html" data-en>Order</a>
 
-        <a href="#products" class="nav-link" data-so style="display:none">Alaabo</a>
-        <a href="#about" class="nav-link" data-so style="display:none">Ku saabsan</a>
-        <a href="#order" class="nav-link" data-so style="display:none">Dalbo</a>
+        <a class="nav-link" href="#products" data-so style="display:none">Alaabo</a>
+        <a class="nav-link" href="#about" data-so style="display:none">Ku saabsan</a>
+        <a class="nav-link" href="order.html" data-so style="display:none">Dalbo</a>
 
         <div class="lang-toggle" role="group" aria-label="Language">
           <button id="lang-en" class="lang active" data-lang="en">EN</button>
@@ -55,21 +52,21 @@
     </div>
   </header>
 
-  <!-- Hero -->
   <main>
     <section class="hero">
-      <div class="hero-inner">
+      <div class="hero-inner section-inner">
         <div class="hero-copy">
           <h1 data-en>Clear labels. Trusted vitamins.</h1>
           <h1 data-so style="display:none">Calaamado cad. Fiitamiino lagu kalsoonaan karo.</h1>
-          <p class="lead" data-en>Cleritas Pharma produces bilingual Somali–English vitamin lines for Women, Men, Children, Prenatal care and Older adults.</p>
-          <p class="lead" data-so style="display:none">Cleritas Pharma waxay soo saartaa fiitamiino af Soomaali–Ingiriis ah oo loogu talagalay Haween, Rag, Carruur, uurka iyo dadka waaweyn.</p>
+
+          <p class="lead" data-en>Bilingual Somali–English vitamin lines for Women, Men, Children, Prenatal care and Older adults — clear dosing, batch & expiry.</p>
+          <p class="lead" data-so style="display:none">Laynno fiitamiino af Soomaali–Ingiriis ah oo loogu talagalay Haween, Rag, Carruur, Uur iyo Dadka Waaweyn — qiyaas cad, batch & taariikh-dhicid.</p>
 
           <div class="hero-actions">
             <a href="#products" class="btn primary" data-en>View products</a>
             <a href="#products" class="btn primary" data-so style="display:none">Eeg alaabo</a>
-            <a href="#order" class="btn ghost" data-en>Place an order</a>
-            <a href="#order" class="btn ghost" data-so style="display:none">Gali dalab</a>
+            <a href="order.html" class="btn ghost" data-en>Place an order</a>
+            <a href="order.html" class="btn ghost" data-so style="display:none">Gali dalab</a>
           </div>
         </div>
 
@@ -82,212 +79,140 @@
       </div>
     </section>
 
-    <!-- Products -->
-    <section id="products" class="products-section">
-      <div class="section-inner">
-        <h2 data-en>Our product range</h2>
-        <h2 data-so style="display:none">Alaabooyinkeenna</h2>
-        <p class="muted" data-en>Mockups — each has a full SKU sheet and batch/expiry on the box.</p>
-        <p class="muted" data-so style="display:none">Muuqaal-tusaale — mid kasta wuxuu leeyahay warqad faahfaahin iyo batch/taariikhda dhicitaanka sanduuqa.</p>
+    <section id="products" class="products-section section-inner">
+      <h2 data-en>Our product range</h2>
+      <h2 data-so style="display:none">Alaabooyinkeenna</h2>
+      <p class="muted" data-en>Mockups — each SKU includes dosing, batch & expiry on the box.</p>
+      <p class="muted" data-so style="display:none">Muuqaal-tusaale — SKU kasta wuxuu leeyahay qiyaas, lambarka batch-ka iyo taariikh-dhicid sanduuqa ku qoran.</p>
 
-        <div class="grid">
-          <!-- Product cards: I chose six SKUs you can refine -->
-          <article class="product-card" data-sku="CPF-W-001">
-            <div class="pc-header">
-              <div class="pc-title">
-                <h3 data-en>Women — Iron 60mg + Folic</h3>
-                <h3 data-so style="display:none">Haween — Bir 60mg + Folic</h3>
-                <p class="muted" data-en>30 tablets • Monthly</p>
-                <p class="muted" data-so style="display:none">30 kiniin • 1 bil</p>
-              </div>
-              <div class="price">USD 2.95</div>
+      <div class="grid">
+        <!-- 6 product cards -->
+        <article class="product-card" data-sku="CPF-W-001">
+          <div class="pc-header">
+            <div class="pc-title">
+              <h3 data-en>Women — Iron 60mg + Folic</h3>
+              <h3 data-so style="display:none">Haween — Bir 60mg + Folic</h3>
+              <p class="muted" data-en>30 tablets • 1 month</p>
+              <p class="muted" data-so style="display:none">30 kiniin • 1 bil</p>
             </div>
-            <p data-en>Daily iron support for women of reproductive age.</p>
-            <p data-so style="display:none">Taageero bir maalinle ah haweenka da'da taranka.</p>
-            <div class="pc-actions">
-              <button class="btn small view-product" data-sku="CPF-W-001" data-en>Order</button>
-              <button class="btn small view-product" data-sku="CPF-W-001" data-so style="display:none">Dalbo</button>
-            </div>
-          </article>
+            <div class="price">USD 2.95</div>
+          </div>
+          <p data-en>Daily iron support for women of reproductive age.</p>
+          <p data-so style="display:none">Taageero bir maalinle ah haweenka da'da taranka.</p>
+          <div class="pc-actions">
+            <a class="btn small" href="order.html?sku=CPF-W-001" data-en>Order</a>
+            <a class="btn small" href="order.html?sku=CPF-W-001" data-so style="display:none">Dalbo</a>
+          </div>
+        </article>
 
-          <article class="product-card" data-sku="CPF-M-001">
-            <div class="pc-header">
-              <div class="pc-title">
-                <h3 data-en>Men — B-Complex + Zinc</h3>
-                <h3 data-so style="display:none">Rag — B-Complex + Zinc</h3>
-                <p class="muted" data-en>60 tablets • 2 months</p>
-                <p class="muted" data-so style="display:none">60 kiniin • 2 bil</p>
-              </div>
-              <div class="price">USD 3.50</div>
+        <article class="product-card" data-sku="CPF-M-001">
+          <div class="pc-header">
+            <div class="pc-title">
+              <h3 data-en>Men — B-Complex + Zinc</h3>
+              <h3 data-so style="display:none">Rag — B-Complex + Zinc</h3>
+              <p class="muted" data-en>60 tablets • 2 months</p>
+              <p class="muted" data-so style="display:none">60 kiniin • 2 bil</p>
             </div>
-            <p data-en>Supports energy metabolism and recovery for active lives.</p>
-            <p data-so style="display:none">Wuxuu taageeraa tamarta iyo soo kabashada nolosha firfircoon.</p>
-            <div class="pc-actions">
-              <button class="btn small view-product" data-sku="CPF-M-001" data-en>Order</button>
-              <button class="btn small view-product" data-sku="CPF-M-001" data-so style="display:none">Dalbo</button>
-            </div>
-          </article>
+            <div class="price">USD 3.50</div>
+          </div>
+          <p data-en>Supports energy metabolism and recovery.</p>
+          <p data-so style="display:none">Wuxuu taageeraa tamarta iyo soo kabashada.</p>
+          <div class="pc-actions">
+            <a class="btn small" href="order.html?sku=CPF-M-001" data-en>Order</a>
+            <a class="btn small" href="order.html?sku=CPF-M-001" data-so style="display:none">Dalbo</a>
+          </div>
+        </article>
 
-          <article class="product-card" data-sku="CPF-K-001">
-            <div class="pc-header">
-              <div class="pc-title">
-                <h3 data-en>Children — Multivitamin Syrup</h3>
-                <h3 data-so style="display:none">Carruur — Syrup Multivitamin</h3>
-                <p class="muted" data-en>120ml • Flavoured</p>
-                <p class="muted" data-so style="display:none">120ml • Dhadhan leh</p>
-              </div>
-              <div class="price">USD 2.25</div>
+        <article class="product-card" data-sku="CPF-K-001">
+          <div class="pc-header">
+            <div class="pc-title">
+              <h3 data-en>Children — Multivitamin Syrup</h3>
+              <h3 data-so style="display:none">Carruur — Syrup Multivitamin</h3>
+              <p class="muted" data-en>120ml • Flavoured</p>
+              <p class="muted" data-so style="display:none">120ml • Dhadhan leh</p>
             </div>
-            <p data-en>Growth & immune support — chewable or syrup options.</p>
-            <p data-so style="display:none">Taageero koboc & difaac — kiniin la nuugo ama syrup.</p>
-            <div class="pc-actions">
-              <button class="btn small view-product" data-sku="CPF-K-001" data-en>Order</button>
-              <button class="btn small view-product" data-sku="CPF-K-001" data-so style="display:none">Dalbo</button>
-            </div>
-          </article>
+            <div class="price">USD 2.25</div>
+          </div>
+          <p data-en>Growth & immune support — syrup or chewable options.</p>
+          <p data-so style="display:none">Taageero koboc & difaac — syrup ama kiniin la nuugo.</p>
+          <div class="pc-actions">
+            <a class="btn small" href="order.html?sku=CPF-K-001" data-en>Order</a>
+            <a class="btn small" href="order.html?sku=CPF-K-001" data-so style="display:none">Dalbo</a>
+          </div>
+        </article>
 
-          <article class="product-card" data-sku="CPF-PREN-001">
-            <div class="pc-header">
-              <div class="pc-title">
-                <h3 data-en>Prenatal — Complete</h3>
-                <h3 data-so style="display:none">Uurka — Dhammaystiran</h3>
-                <p class="muted" data-en>90 tablets • Folic + Iron + DHA</p>
-                <p class="muted" data-so style="display:none">90 kiniin • Folic + Bir + DHA</p>
-              </div>
-              <div class="price">USD 6.50</div>
+        <article class="product-card" data-sku="CPF-PREN-001">
+          <div class="pc-header">
+            <div class="pc-title">
+              <h3 data-en>Prenatal — Complete</h3>
+              <h3 data-so style="display:none">Uurka — Dhammaystiran</h3>
+              <p class="muted" data-en>90 tablets • Folic + Iron + DHA</p>
+              <p class="muted" data-so style="display:none">90 kiniin • Folic + Bir + DHA</p>
             </div>
-            <p data-en>Formulated for preconception and pregnancy support.</p>
-            <p data-so style="display:none">Loogu talagalay taageerada uurka iyo kahor uurka.</p>
-            <div class="pc-actions">
-              <button class="btn small view-product" data-sku="CPF-PREN-001" data-en>Order</button>
-              <button class="btn small view-product" data-sku="CPF-PREN-001" data-so style="display:none">Dalbo</button>
-            </div>
-          </article>
+            <div class="price">USD 6.50</div>
+          </div>
+          <p data-en>Preconception and pregnancy support.</p>
+          <p data-so style="display:none">Taageerada kahor uurka iyo inta lagu jiro uurka.</p>
+          <div class="pc-actions">
+            <a class="btn small" href="order.html?sku=CPF-PREN-001" data-en>Order</a>
+            <a class="btn small" href="order.html?sku=CPF-PREN-001" data-so style="display:none">Dalbo</a>
+          </div>
+        </article>
 
-          <article class="product-card" data-sku="CPF-ELD-001">
-            <div class="pc-header">
-              <div class="pc-title">
-                <h3 data-en>Elderly — Calcium + Vitamin D</h3>
-                <h3 data-so style="display:none">Waayeel — Kalsiyam + Vitamin D</h3>
-                <p class="muted" data-en>30 tablets • Bone health</p>
-                <p class="muted" data-so style="display:none">30 kiniin • Caafimaadka lafaha</p>
-              </div>
-              <div class="price">USD 3.00</div>
+        <article class="product-card" data-sku="CPF-ELD-001">
+          <div class="pc-header">
+            <div class="pc-title">
+              <h3 data-en>Elderly — Calcium + Vitamin D</h3>
+              <h3 data-so style="display:none">Waayeel — Kalsiyam + Vitamin D</h3>
+              <p class="muted" data-en>30 tablets • Bone health</p>
+              <p class="muted" data-so style="display:none">30 kiniin • Caafimaadka lafaha</p>
             </div>
-            <p data-en>Helps maintain bone strength and mobility.</p>
-            <p data-so style="display:none">Waxay ka caawisaa ilaalinta xoogga lafaha iyo dhaqdhaqaaqa.</p>
-            <div class="pc-actions">
-              <button class="btn small view-product" data-sku="CPF-ELD-001" data-en>Order</button>
-              <button class="btn small view-product" data-sku="CPF-ELD-001" data-so style="display:none">Dalbo</button>
-            </div>
-          </article>
+            <div class="price">USD 3.00</div>
+          </div>
+          <p data-en>Helps maintain bone strength and mobility.</p>
+          <p data-so style="display:none">Waxay ka caawisaa ilaalinta xoogga lafaha iyo dhaqdhaqaaqa.</p>
+          <div class="pc-actions">
+            <a class="btn small" href="order.html?sku=CPF-ELD-001" data-en>Order</a>
+            <a class="btn small" href="order.html?sku=CPF-ELD-001" data-so style="display:none">Dalbo</a>
+          </div>
+        </article>
 
-          <article class="product-card" data-sku="CPF-IMM-001">
-            <div class="pc-header">
-              <div class="pc-title">
-                <h3 data-en>Immune — Vitamin C + Zinc</h3>
-                <h3 data-so style="display:none">Difaac — Vitamin C + Zinc</h3>
-                <p class="muted" data-en>30 effervescent tablets</p>
-                <p class="muted" data-so style="display:none">30 kiniin la karkariyo</p>
-              </div>
-              <div class="price">USD 2.00</div>
+        <article class="product-card" data-sku="CPF-IMM-001">
+          <div class="pc-header">
+            <div class="pc-title">
+              <h3 data-en>Immune — Vitamin C + Zinc</h3>
+              <h3 data-so style="display:none">Difaac — Vitamin C + Zinc</h3>
+              <p class="muted" data-en>30 effervescent tablets</p>
+              <p class="muted" data-so style="display:none">30 kiniin la karkariyo</p>
             </div>
-            <p data-en>Rapid immune support — day or night.</p>
-            <p data-so style="display:none">Taageero difaac degdeg ah — maalin ama habeen.</p>
-            <div class="pc-actions">
-              <button class="btn small view-product" data-sku="CPF-IMM-001" data-en>Order</button>
-              <button class="btn small view-product" data-sku="CPF-IMM-001" data-so style="display:none">Dalbo</button>
-            </div>
-          </article>
-        </div>
+            <div class="price">USD 2.00</div>
+          </div>
+          <p data-en>Rapid immune support.</p>
+          <p data-so style="display:none">Taageero difaac degdeg ah.</p>
+          <div class="pc-actions">
+            <a class="btn small" href="order.html?sku=CPF-IMM-001" data-en>Order</a>
+            <a class="btn small" href="order.html?sku=CPF-IMM-001" data-so style="display:none">Dalbo</a>
+          </div>
+        </article>
       </div>
     </section>
 
-    <!-- About -->
-    <section id="about" class="about">
-      <div class="section-inner">
-        <h2 data-en>About Cleritas Pharma</h2>
-        <h2 data-so style="display:none">Ku saabsan Cleritas Pharma</h2>
-        <p data-en>We make bilingual Somali/English vitamin labels with clear dosing, batch and expiry information. Products sourced from GMP-certified manufacturers and repackaged with tamper-evident seals.</p>
-        <p data-so style="display:none">Waxaan sameynaa calaamado fiitamiino oo af Soomaali/Ingiriis ah oo leh qiyaas cad, batch iyo taariikh-dhicid. Alaabooyinka waxaa laga keenayaa soo-saareyaal GMP leh waxaana dib loo baakadeeyaa iyadoo la isticmaalayo xirmooyin muujinaya haddii la farageliyey.</p>
-      </div>
-    </section>
-
-    <!-- Ordering section -->
-    <section id="order" class="order-section">
-      <div class="section-inner">
-        <h2 data-en>Place an order</h2>
-        <h2 data-so style="display:none">Gali dalab</h2>
-
-        <form id="order-form" class="order-form" autocomplete="on">
-          <div class="form-row">
-            <label data-en for="cust-name">Full name</label>
-            <label data-so for="cust-name" style="display:none">Magaca oo buuxa</label>
-            <input id="cust-name" name="name" required>
-          </div>
-
-          <div class="form-row">
-            <label data-en for="cust-phone">Phone / WhatsApp</label>
-            <label data-so for="cust-phone" style="display:none">Telefoon / WhatsApp</label>
-            <input id="cust-phone" name="phone" required>
-          </div>
-
-          <div class="form-row">
-            <label data-en for="cust-address">Delivery address (city / area)</label>
-            <label data-so for="cust-address" style="display:none">Cinwaanka gaarsiinta (magaalo / deegaan)</label>
-            <input id="cust-address" name="address" required>
-          </div>
-
-          <div class="form-row">
-            <label data-en for="product-select">Product</label>
-            <label data-so for="product-select" style="display:none">Alaabta</label>
-            <select id="product-select" name="product" required>
-              <option value="">— select —</option>
-              <option value="CPF-W-001">Women — Iron 60mg + Folic (CPF-W-001)</option>
-              <option value="CPF-M-001">Men — B-Complex + Zinc (CPF-M-001)</option>
-              <option value="CPF-K-001">Children — Multivitamin Syrup (CPF-K-001)</option>
-              <option value="CPF-PREN-001">Prenatal — Complete (CPF-PREN-001)</option>
-              <option value="CPF-ELD-001">Elderly — Calcium + Vitamin D (CPF-ELD-001)</option>
-              <option value="CPF-IMM-001">Immune — Vitamin C + Zinc (CPF-IMM-001)</option>
-            </select>
-          </div>
-
-          <div class="form-row">
-            <label data-en for="qty">Quantity (units)</label>
-            <label data-so for="qty" style="display:none">Tirada</label>
-            <input id="qty" name="quantity" type="number" min="1" value="1" required>
-          </div>
-
-          <div class="form-row">
-            <label data-en for="notes">Notes (delivery time / preferred pharmacy)</label>
-            <label data-so for="notes" style="display:none">Faallooyin (waqtiga gaarsiinta / farmashiiga la doorbido)</label>
-            <textarea id="notes" name="notes" rows="3"></textarea>
-          </div>
-
-          <div class="form-row form-actions">
-            <button type="submit" class="btn primary" data-en>Submit order</button>
-            <button type="submit" class="btn primary" data-so style="display:none">Gudbi dalabka</button>
-            <button type="button" id="order-reset" class="btn ghost" data-en>Reset</button>
-            <button type="button" id="order-reset-so" class="btn ghost" data-so style="display:none">Nadiifi</button>
-          </div>
-
-          <p class="muted small" style="margin-top:10px" data-en>Orders will open your mail client with a prefilled message to <strong>orders@cleritaspharma.com</strong>. If you prefer, copy the order summary and send via WhatsApp.</p>
-          <p class="muted small" data-so style="display:none">Dalabyadu waxay furi doonaan barnaamijka email-ka oo farriin hor-qor ah u diraya <strong>orders@cleritaspharma.com</strong>. Haddii aad doorbidayso, koobbi oo dir via WhatsApp.</p>
-        </form>
-
-        <div id="order-confirm" class="order-confirm" aria-live="polite" style="display:none"></div>
-      </div>
+    <section id="about" class="about section-inner">
+      <h2 data-en>About Cleritas Pharma</h2>
+      <h2 data-so style="display:none">Ku saabsan Cleritas Pharma</h2>
+      <p data-en>Cleritas Pharma produces bilingual Somali/English vitamin labels with clear dosing, batch and expiry info. Products are sourced from GMP-certified manufacturers and repackaged with tamper-evident seals.</p>
+      <p data-so style="display:none">Cleritas Pharma waxay soo saartaa calaamado fiitamiino af Soomaali/Ingiriis ah oo leh qiyaas cad, lambarka batch-ka iyo taariikh-dhicid. Alaabooyinka waxaa laga keenayaa soo-saareyaal GMP ah waxaana dib loo baakadeeyaa iyadoo la adeegsanayo xirmooyin muujinaya haddii wax la farageliyey.</p>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="section-inner">
+    <div class="section-inner footer-inner">
       <div class="footer-left">
         <small>© Cleritas Pharma <span id="year"></span></small>
       </div>
-      <div class="footer-right">
-        <small data-en>Contact: info@cleritaspharma.com</small>
-        <small data-so style="display:none">Email: info@cleritaspharma.com</small>
+      <div class="footer-right small">
+        <span data-en>Contact: info@cleritaspharma.com</span>
+        <span data-so style="display:none">Email: info@cleritaspharma.com</span>
       </div>
     </div>
   </footer>
