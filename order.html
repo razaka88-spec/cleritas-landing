@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Order — Cleritas Pharma</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Cleritas Pharma home">
+        <!-- small logo SVG reused -->
+        <svg class="logo" viewBox="0 0 220 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+          <defs><linearGradient id="lg2" x1="0" x2="1"><stop offset="0" stop-color="#0B3D91"/><stop offset="1" stop-color="#2D6AE3"/></linearGradient></defs>
+          <g transform="translate(0,4)">
+            <path d="M20 2c8 0 14 5 14 11v9c0 6-6 11-14 11S6 28 6 22V13c0-6 6-11 14-11z" fill="url(#lg2)"/>
+            <path d="M20 6c3 0 6 2 6 5v7c0 3-3 5-6 5s-6-2-6-5v-7c0-3 3-5 6-5z" fill="#fff" opacity="0.95"/>
+            <text x="44" y="23" font-family="Poppins, system-ui, sans-serif" font-size="16" font-weight="700" fill="#071A2F">CLERITAS</text>
+            <text x="44" y="36" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#556175">PHARMA</text>
+          </g>
+        </svg>
+      </a>
+
+      <nav class="main-nav">
+        <a class="nav-link" href="index.html" data-en>Home</a>
+        <a class="nav-link" href="index.html#products" data-en>Products</a>
+        <a class="nav-link" href="index.html#about" data-en>About</a>
+
+        <a class="nav-link" href="index.html" data-so style="display:none">Bogga Hore</a>
+        <a class="nav-link" href="index.html#products" data-so style="display:none">Alaabo</a>
+        <a class="nav-link" href="index.html#about" data-so style="display:none">Ku saabsan</a>
+
+        <div class="lang-toggle" role="group" aria-label="Language">
+          <button id="lang-en" class="lang active" data-lang="en">EN</button>
+          <button id="lang-so" class="lang" data-lang="so">SO</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="order-section section-inner">
+      <h1 data-en>Place an Order</h1>
+      <h1 data-so style="display:none">Gali Dalab</h1>
+      <p class="muted" data-en>Complete the form below. Orders are sent to our team via secure Formspree endpoint.</p>
+      <p class="muted" data-so style="display:none">Fadlan buuxi foomka hoose. Dalabyada waxaa loo diraa kooxdayada iyada oo loo marayo Formspree ammaan ah.</p>
+
+      <!-- Replace the action with your Formspree ID: https://formspree.io/f/your-id -->
+      <form id="order-form" class="order-form" action="https://formspree.io/f/your-id" method="POST" accept-charset="utf-8">
+        <div class="form-row">
+          <label data-en for="cust-name">Full name</label>
+          <label data-so for="cust-name" style="display:none">Magaca oo buuxa</label>
+          <input id="cust-name" name="name" required>
+        </div>
+
+        <div class="form-row">
+          <label data-en for="cust-phone">Phone / WhatsApp</label>
+          <label data-so for="cust-phone" style="display:none">Telefoon / WhatsApp</label>
+          <input id="cust-phone" name="phone" required>
+        </div>
+
+        <div class="form-row">
+          <label data-en for="cust-address">Delivery address (city / area)</label>
+          <label data-so for="cust-address" style="display:none">Cinwaanka gaarsiinta (magaalo / deegaan)</label>
+          <input id="cust-address" name="address" required>
+        </div>
+
+        <div class="form-row">
+          <label data-en for="product-select">Product (SKU)</label>
+          <label data-so for="product-select" style="display:none">Alaabta (SKU)</label>
+          <select id="product-select" name="product" required>
+            <option value="">— select —</option>
+            <option value="CPF-W-001">Women — Iron 60mg + Folic (CPF-W-001)</option>
+            <option value="CPF-M-001">Men — B-Complex + Zinc (CPF-M-001)</option>
+            <option value="CPF-K-001">Children — Multivitamin Syrup (CPF-K-001)</option>
+            <option value="CPF-PREN-001">Prenatal — Complete (CPF-PREN-001)</option>
+            <option value="CPF-ELD-001">Elderly — Calcium + Vitamin D (CPF-ELD-001)</option>
+            <option value="CPF-IMM-001">Immune — Vitamin C + Zinc (CPF-IMM-001)</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label data-en for="qty">Quantity (units)</label>
+          <label data-so for="qty" style="display:none">Tirada</label>
+          <input id="qty" name="quantity" type="number" min="1" value="1" required>
+        </div>
+
+        <div class="form-row" style="grid-column:1/-1">
+          <label data-en for="notes">Notes (delivery time / preferred pharmacy)</label>
+          <label data-so for="notes" style="display:none">Faallooyin (waqtiga gaarsiinta / farmashiiga la doorbido)</label>
+          <textarea id="notes" name="notes" rows="4"></textarea>
+        </div>
+
+        <div class="form-row form-actions" style="grid-column:1/-1">
+          <button type="submit" class="btn primary" data-en>Submit order</button>
+          <button type="submit" class="btn primary" data-so style="display:none">Gudbi dalabka</button>
+          <button type="button" id="order-reset" class="btn ghost" data-en>Reset</button>
+          <button type="button" id="order-reset-so" class="btn ghost" data-so style="display:none">Nadiifi</button>
+        </div>
+
+        <input type="hidden" name="_subject" value="New Cleritas order">
+        <input type="hidden" name="_language" value="en">
+      </form>
+
+      <div id="order-confirm" class="order-confirm" aria-live="polite" style="display:none"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="section-inner footer-inner">
+      <div class="footer-left"><small>© Cleritas Pharma <span id="year"></span></small></div>
+      <div class="footer-right small"><small data-en>Contact: info@cleritaspharma.com</small><small data-so style="display:none">Email: info@cleritaspharma.com</small></div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
