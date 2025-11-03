@@ -101,6 +101,77 @@
         <a class="btn small" href="#" data-so style="display:none">Wax badan</a>
       </article>
     </section>
+<!-- Featured product card (add inside #products) -->
+<article class="card featured-product" id="prod-001">
+  <div class="card-top">
+    <div class="product-title">
+      <h3 data-en>GABS Women — Iron + Folic</h3>
+      <h3 data-so style="display:none">Haween — Bir + Folic</h3>
+      <p class="muted" data-en>30 tablets — 1 month</p>
+      <p class="muted" data-so style="display:none">30 kiniin — 1 bil</p>
+    </div>
+    <div class="price">
+      <div class="amount">USD 2.50</div>
+    </div>
+  </div>
+
+  <p class="product-short" data-en>Daily iron support for women of reproductive age.</p>
+  <p class="product-short" data-so style="display:none">Taageero bir maalinle ah haweenka da'da taranka.</p>
+
+  <div class="card-actions">
+    <button class="btn small btn-primary view-product" data-id="prod-001" data-en>View</button>
+    <button class="btn small btn-primary view-product" data-id="prod-001" data-so style="display:none">Eeg</button>
+    <button class="btn small" onclick="location.href='#contact'" data-en>Order</button>
+    <button class="btn small" onclick="location.href='#contact'" data-so style="display:none">Dalbo</button>
+  </div>
+</article>
+
+<!-- Product detail modal (place near end of body or inside main) -->
+<div id="product-modal" class="modal" aria-hidden="true" style="display:none">
+  <div class="modal-backdrop"></div>
+  <div class="modal-panel" role="dialog" aria-modal="true">
+    <button class="modal-close" aria-label="Close">×</button>
+
+    <div class="modal-body">
+      <div class="modal-left">
+        <div class="product-image">
+          <!-- placeholder -->
+          <svg width="160" height="120" viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg">
+            <rect width="160" height="120" rx="10" fill="#f6fbff"></rect>
+            <text x="80" y="68" font-size="12" text-anchor="middle" fill="#b6c9f5">Women — Iron + Folic</text>
+          </svg>
+        </div>
+      </div>
+
+      <div class="modal-right">
+        <h3 data-en>GABS Women — Iron + Folic</h3>
+        <h3 data-so style="display:none">Haween — Bir + Folic</h3>
+
+        <p class="muted" data-en>30 tablets • USD 2.50</p>
+        <p class="muted" data-so style="display:none">30 kiniin • USD 2.50</p>
+
+        <h4 data-en>Overview</h4>
+        <h4 data-so style="display:none">Kooban</h4>
+
+        <p data-en>Daily iron supplement with folic acid to support healthy pregnancy and energy levels.</p>
+        <p data-so style="display:none">Kaalmaynta birta maalinlaha ah oo leh folic acid si ay u taageerto uur caafimaad qaba iyo heerarka tamarta.</p>
+
+        <ul class="features">
+          <li><span data-en>Iron (ferrous fumarate)</span><span data-so style="display:none">Bir (ferrous fumarate)</span></li>
+          <li><span data-en>Folic Acid 400µg</span><span data-so style="display:none">Folic Acid 400µg</span></li>
+          <li><span data-en>Batch & expiry on box</span><span data-so style="display:none">Batch & taariikhda dhicitaanka sanduuqa</span></li>
+        </ul>
+
+        <div class="modal-actions">
+          <button class="btn primary" id="add-to-cart" data-en>Add to cart</button>
+          <button class="btn primary" id="add-to-cart-so" data-so style="display:none">Ku dar gaadhiga</button>
+          <button class="btn ghost modal-close" data-en>Close</button>
+          <button class="btn ghost modal-close" data-so style="display:none">Xidh</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
     <section id="about" class="about">
       <div>
