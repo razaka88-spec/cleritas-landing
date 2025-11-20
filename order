@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order – Cleritas Pharma</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+
+<header class="top-banner">
+    <a href="/"><img src="assets/logo.png" class="logo" alt="Cleritas Pharma Logo"></a>
+    <div class="lang-toggle">
+        <button onclick="setLanguage('en')">EN</button>
+        <button onclick="setLanguage('so')">SO</button>
+    </div>
+</header>
+
+<section class="order-section">
+    <h1 data-en="Place an Order" data-so="Dalbo Alaab">Place an Order</h1>
+    <p data-en="Fill in the form below to order our products."
+       data-so="Buuxi foomka hoose si aad u dalbato alaabteena.">
+       Fill in the form below to order our products.
+    </p>
+
+    <form action="https://formspree.io/f/mzzbpsvv" method="POST" class="order-form">
+
+        <label data-en="Full Name" data-so="Magacaaga">
+            Full Name
+        </label>
+        <input type="text" name="name" required>
+
+        <label data-en="Email Address" data-so="Cinwaanka Email-ka">
+            Email Address
+        </label>
+        <input type="email" name="email" required>
+
+        <label data-en="Phone Number" data-so="Lambarka Taleefanka">
+            Phone Number
+        </label>
+        <input type="text" name="phone" required>
+
+        <label data-en="Select Product" data-so="Dooro Alaabta">
+            Select Product
+        </label>
+        <select name="product" required>
+            <option value="Women’s Multivitamin">Women’s Multivitamin</option>
+            <option value="Men’s Multivitamin">Men’s Multivitamin</option>
+            <option value="Children’s Vitamins">Children’s Vitamins</option>
+        </select>
+
+        <label data-en="Quantity" data-so="Tirada">
+            Quantity
+        </label>
+        <input type="number" name="quantity" min="1" required>
+
+        <label data-en="Delivery Address" data-so="Cinwaanka Gaarsiinta">
+            Delivery Address
+        </label>
+        <textarea name="address" required></textarea>
+
+        <button type="submit" class="submit-btn"
+            data-en="Submit Order" data-so="Gudbi Dalabka">
+            Submit Order
+        </button>
+
+    </form>
+</section>
+
+<footer>
+    <p>© 2025 Cleritas Pharma</p>
+</footer>
+
+</body>
+</html>
