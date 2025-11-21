@@ -25,7 +25,8 @@
        Fill in the form below to order our products.
     </p>
 
-    <form action="https://formspree.io/f/mzzbpsvv" method="POST" class="order-form">
+    <form id="orderForm" class="order-form">
+
 
         <label data-en="Full Name" data-so="Magacaaga">
             Full Name
@@ -75,3 +76,33 @@
 
 </body>
 </html>
+
+<script>
+document.getElementById("orderForm").addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    const data = {
+        name: this.name.value,
+        email: this.email.value,
+        phone: this.phone.value,
+        product: this.product.value,
+        quantity: this.quantity.value,
+        address: this.address.value
+    };
+
+    const response = await fetch("/api/order", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+        alert("Your order has been submitted.");
+        this.reset();
+    } else {
+        alert("Something went wrong.");
+    }
+});
+</script>
