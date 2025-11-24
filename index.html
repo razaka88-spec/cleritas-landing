@@ -1,154 +1,133 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Cleritas Pharma — Clear labels, trusted vitamins</title>
-  <meta name="description" content="Cleritas Pharma — Somali/English vitamin labels for women, men and children. Clear dosing, batch & expiry info." />
-  <meta property="og:title" content="Cleritas Pharma — Clear labels, trusted vitamins" />
-  <meta property="og:description" content="Bilingual Somali–English vitamin lines for Women, Men, Children, Prenatal and Elderly care." />
-  <meta property="og:image" content="assets/logo.png" />
-  <link rel="stylesheet" href="styles.css">
-  <script src="main.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order – Cleritas Pharma</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js" defer></script>
 </head>
+
 <body>
 
-  <!-- top banner -->
-  <div class="top-banner" id="top-banner" role="region" aria-label="Announcement">
-    <div class="section-inner banner-inner">
-      <div>
-        <strong data-en>Now shipping to Somalia — bilingual labels (Somali & English).</strong>
-        <strong data-so style="display:none">Hadda waxaan u dirnaa Soomaaliya — Daawo ku calaameydsan af Soomaali & Ingiriis.</strong>
-      </div>
-      <button id="banner-close" aria-label="Close announcement">×</button>
+<header class="top-banner">
+    <a href="/" aria-label="Homepage">
+        <img src="assets/logo.png" class="logo" alt="Cleritas Pharma Logo">
+    </a>
+
+    <div class="lang-toggle">
+        <button data-lang="en">EN</button>
+        <button data-lang="so">SO</button>
     </div>
-  </div>
+</header>
 
-  <!-- header -->
-  <header class="site-header" role="banner">
-    <div class="section-inner header-inner">
-      <a class="brand" href="#home" aria-label="Cleritas Pharma home">
-        <img src="assets/logo.png" alt="Cleritas Pharma logo" class="logo">
-      </a>
-      <nav class="main-nav" role="navigation" aria-label="Primary">
-        <a class="nav-link" href="#products" data-en>Products</a>
-        <a class="nav-link" href="#about" data-en>About</a>
-        <a class="nav-link" href="#contact" data-en>Contact</a>
-        <a class="nav-link" href="order.html" data-en>Order</a>
+<main>
+<section class="order-section">
+    <h1 data-en="Place an Order" data-so="Dalbo Alaab">Place an Order</h1>
 
-        <a class="nav-link" href="#products" data-so style="display:none">Produkts</a>
-        <a class="nav-link" href="#about" data-so style="display:none">Yaan nahay</a>
-        <a class="nav-link" href="#contact" data-so style="display:none">Nalagaa soo xirii</a>
-        <a class="nav-link" href="order.html" data-so style="display:none">Dalbo Alaabta</a>
+    <p data-en="Fill in the form below to order our products."
+       data-so="Buuxi foomka hoose si aad u dalbato alaabteena.">
+       Fill in the form below to order our products.
+    </p>
 
-        <div class="lang-toggle" role="group" aria-label="Language">
-          <button id="lang-en" class="lang active" data-lang="en">EN</button>
-          <button id="lang-so" class="lang" data-lang="so">SO</button>
-        </div>
-      </nav>
-    </div>
-  </header>
+    <form id="orderForm" class="order-form" novalidate>
+        
+        <label for="name" data-en="Full Name" data-so="Magacaaga">Full Name</label>
+        <input id="name" name="name" type="text" required autocomplete="name">
 
-  <main id="home">
+        <label for="email" data-en="Email Address" data-so="Cinwaanka Email-ka">Email Address</label>
+        <input id="email" name="email" type="email" required autocomplete="email">
 
-    <!-- hero -->
-    <section class="hero section-inner">
-      <div class="hero-copy">
-        <h1 data-en>Clear labels. Trusted vitamins.</h1>
-        <h1 data-so style="display:none">Fiitamiino si cad u calaamadeysan - lagu kalsoonaan karo.</h1>
+        <label for="phone" data-en="Phone Number" data-so="Lambarka Taleefanka">Phone Number</label>
+        <input id="phone" name="phone" type="tel" required inputmode="tel" autocomplete="tel">
 
-        <p class="lead" data-en>Cleritas Pharma produces bilingual Somali–English vitamins for Women, Men, Children, Prenatal and Elderly care — clear dosing, batch & expiry on every box.</p>
-        <p class="lead" data-so style="display:none">Cleritas Pharma waxay soo saartaa fiitamiino af Soomaali–Ingiriis ah oo loogu talagalay Haween, Rag, Carruur, Haweenka Uurka iyo Dadka Waaweyn — qiyaas cad, lambarka batch-ka iyo taariikhda u dhacayo ku qoron.</p>
+        <label for="product" data-en="Select Product" data-so="Dooro Alaabta">Select Product</label>
+        <select id="product" name="product" required>
+            <option value="Women’s Multivitamin">Women’s Multivitamin</option>
+            <option value="Men’s Multivitamin">Men’s Multivitamin</option>
+            <option value="Children’s Vitamins">Children’s Vitamins</option>
+        </select>
 
-        <div class="hero-actions">
-          <a class="btn primary" href="#products" data-en>See products</a>
-          <a class="btn primary" href="#products" data-so style="display:none">Eeg alaabta</a>
-          <a class="btn ghost" href="order.html" data-en>Place an order</a>
-          <a class="btn ghost" href="order.html" data-so style="display:none">Ka dalbo halkan</a>
-        </div>
-      </div>
+        <label for="quantity" data-en="Quantity" data-so="Tirada">Quantity</label>
+        <input id="quantity" name="quantity" type="number" min="1" required>
 
-      <div class="hero-visual" aria-hidden="true">
-        <!-- simple bottle mockups SVG -->
-        <svg width="420" height="260" viewBox="0 0 420 260" xmlns="http://www.w3.org/2000/svg">
-          <rect x="0" y="0" width="420" height="260" rx="14" fill="#fff"/>
-          <g transform="translate(30,30)">
-            <rect width="80" height="160" rx="10" fill="#fff" stroke="#dfeefe"/>
-            <rect x="100" width="80" height="160" rx="10" fill="#fff" stroke="#fff0db"/>
-            <rect x="200" width="80" height="160" rx="10" fill="#fff" stroke="#fff0f6"/>
-            <text x="40" y="130" text-anchor="middle" fill="#cfe0ff" font-size="12">WOMEN</text>
-            <text x="140" y="130" text-anchor="middle" fill="#fbe8b6" font-size="12">MEN</text>
-            <text x="240" y="130" text-anchor="middle" fill="#ffdfe8" font-size="12">KIDS</text>
-          </g>
-        </svg>
-      </div>
-    </section>
+        <label for="address" data-en="Delivery Address" data-so="Cinwaanka Gaarsiinta">Delivery Address</label>
+        <textarea id="address" name="address" required></textarea>
 
-    <!-- products -->
-    <section id="products" class="products-section section-inner" aria-labelledby="products-heading">
-      <h2 id="products-heading" data-en>Product range</h2>
-      <h2 data-so style="display:none">Alaabooyinkeenna</h2>
-      <p class="muted" data-en>Mockups — each SKU includes ingredients, dosing, batch & expiry printed on the box.</p>
-      <p class="muted" data-so style="display:none">Muuqaal-tusaale — SKU kasta wuxuu leeyahay maaddooyin, qiyaas, lambarka batch-ka iyo taariikh-dhicid oo dhalada lagu daabacay.</p>
+        <button type="submit" class="submit-btn"
+            data-en="Submit Order" data-so="Gudbi Dalabka">
+            Submit Order
+        </button>
+    </form>
 
-      <div class="grid" id="products-grid">
-        <!-- product cards will be repeated here with the latest layout -->
-      </div>
-    </section>
+    <div id="formStatus" class="form-status"></div>
 
-    <!-- about -->
-    <section id="about" class="about section-inner">
-      <h2 data-en>About Cleritas Pharma</h2>
-      <h2 data-so style="display:none">Ku saabsan Cleritas Pharma</h2>
-      <p data-en>We create bilingual Somali/English vitamin labeling with clear dosing, visible batch & expiry information, and tamper-evident packaging. Products sourced from GMP-certified manufacturers and repackaged under quality control.</p>
-      <p data-so style="display:none">Waxaan sameynaa fiitamiino af Soomaali/Ingiriis ku calaameedsan oo leh qiyaas cad, lambarka batch-ka iyo taariikh-dhicid. Sidoo kale waxay ku jiraan xirmooyin muujinaya haddii la farageliyey. Alaabooyinka waxaa laga keenayaa soo-saareyaal GMP-certificate leh waxaana dib loo baakadeeyaa iyadoo la ilaalinayo tayada.</p>
-    </section>
+</section>
+</main>
 
-    <!-- contact -->
-    <section id="contact" class="contact section-inner">
-      <h2 data-en>Contact</h2>
-      <h2 data-so style="display:none">Nala soo xiriir</h2>
-      <p data-en>Email: info@cleritaspharma.com</p>
-      <p data-so style="display:none">Email: info@cleritaspharma.com</p>
-      <p data-en>Phone / WhatsApp: +045 42209661</p>
-      <p data-so style="display:none">Telefoon / WhatsApp: +45 42209661</p>
-    </section>
+<footer>
+    <p>© 2025 Cleritas Pharma</p>
+</footer>
 
-  </main>
 
-  <!-- footer -->
-  <footer class="site-footer">
-    <div class="section-inner footer-inner">
-      <small>© Cleritas Pharma <span id="year"></span></small>
-      <div class="footer-links small">
-        <a href="order.html" data-en>Order</a>
-        <a href="order.html" data-so style="display:none">Dalbo</a>
-      </div>
-    </div>
-  </footer>
+<script>
+// ---------------------------------------------------------
+// Language Toggle
+// ---------------------------------------------------------
+document.querySelectorAll(".lang-toggle button").forEach(btn =>
+    btn.addEventListener("click", () => setLanguage(btn.dataset.lang))
+);
 
-  <!-- product quick-view modal -->
-  <div id="product-modal" class="modal" style="display:none" aria-hidden="true">
-    <div class="modal-backdrop"></div>
-    <div class="modal-panel" role="dialog" aria-modal="true" tabindex="0">
-      <button class="modal-close" aria-label="Close">×</button>
-      <div class="modal-body">
-        <div class="modal-left">
-          <div class="product-img-placeholder">Image</div>
-        </div>
-        <div class="modal-right">
-          <h3 class="m-title"></h3>
-          <p class="muted m-sku"></p>
-          <p class="m-desc"></p>
-          <ul class="features m-feat"></ul>
-          <div class="modal-actions">
-            <a class="btn primary modal-order" href="#">Order</a>
-            <button class="btn ghost modal-close">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+function setLanguage(lang) {
+    document.querySelectorAll("[data-en]").forEach(el => {
+        el.innerText = el.getAttribute(`data-${lang}`);
+    });
+}
+
+
+// ---------------------------------------------------------
+// Order Form Submission
+// ---------------------------------------------------------
+document.getElementById("orderForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const form = e.target;
+    const status = document.getElementById("formStatus");
+    status.innerText = "";
+
+    const data = {
+        name: form.name.value.trim(),
+        email: form.email.value.trim(),
+        phone: form.phone.value.trim(),
+        product: form.product.value,
+        quantity: form.quantity.value,
+        address: form.address.value.trim()
+    };
+
+    try {
+        const response = await fetch("/api/order", {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+            status.innerText = "Your order has been submitted.";
+            status.className = "form-status success";
+            form.reset();
+        } else {
+            throw new Error("Server returned an error.");
+        }
+
+    } catch (err) {
+        status.innerText = "Something went wrong. Please try again.";
+        status.className = "form-status error";
+    }
+});
+</script>
 
 </body>
 </html>
