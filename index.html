@@ -1,126 +1,140 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Cleritas Pharma — Clear labels, trusted vitamins</title>
-<meta name="description" content="Cleritas Pharma — Somali/English vitamin
-labels for women, men and children. Clear dosing, batch & expiry info." />
-<meta property="og:image" content="assets/logo 1.png" />
-<link rel="stylesheet" href="styles.css">
-<script src="main.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cleritas Pharma – Clear Labeled Vitamins</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="top-banner" id="top-banner">
-<div class="section-inner banner-inner">
-<div>
-<strong data-en>Now shipping to Somalia — bilingual labels (Somali &
-English).</strong>
-<strong data-so style="display:none">Hadda waxaan u dirnaa Soomaaliya
-— Daawo ku calaameydsan af Soomaali & Ingiriis.</strong>
-</div>
-<button id="banner-close">×</button>
-</div>
-</div>
-<header class="site-header">
-<div class="section-inner header-inner">
-<a class="brand" href="#home">
-<img src="assets/logo 1.png" alt="Cleritas Pharma logo"
-class="logo" />
-</a>
-<nav class="main-nav">
-<a class="nav-link" href="#products" data-en>Products</a>
-<a class="nav-link" href="#about" data-en>About</a>
-<a class="nav-link" href="#contact" data-en>Contact</a>
-<a class="nav-link" href="order.html" data-en>Order</a>
-<a class="nav-link" href="#products" data-so
-1style="display:none">Alaabo</a>
-<a class="nav-link" href="#about" data-so style="display:none">Nagu
-saabsan</a>
-<a class="nav-link" href="#contact" data-so style="display:none">Nala
-soo xiriir</a>
-<a class="nav-link" href="order.html" data-so
-style="display:none">Dalbo</a>
-<div class="lang-toggle">
-<button id="lang-en" class="lang active" data-lang="en">EN</button>
-<button id="lang-so" class="lang" data-lang="so">SO</button>
-</div>
-</nav>
-</div>
+
+<header>
+  <div class="container">
+    <img src="assets/logo.png" alt="Cleritas Pharma" class="logo">
+    <nav>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="lang-toggle">
+      <button id="en-btn">🇬🇧</button>
+      <button id="so-btn">🇸🇴</button>
+    </div>
+    <div class="cart">
+      <span id="cart-count">0</span> 🛒
+    </div>
+  </div>
 </header>
-<main id="home">
-<section class="hero section-inner">
-<div class="hero-copy">
-<h1 data-en>Clear labels. Trusted vitamins.</h1>
-<h1 data-so style="display:none">Fiitamiino si cad u calaamadeysan —
-lagu kalsoonaan karo.</h1>
-<p class="lead" data-en>Cleritas Pharma produces bilingual Somali–
-English vitamins for Women, Men, Children, Prenatal and Elderly care — clear
-dosing, batch & expiry on every box.</p>
-<p class="lead" data-so style="display:none">Cleritas Pharma waxay
-soo saartaa fiitamiino af Soomaali–Ingiriis ah oo loogu talagalay Haween,
-Rag, Carruur, Haweenka Uurka iyo Dadka Waaweyn — qiyaas cad, lambarka batch-
-ka iyo taariikh-dhicid ku qoron.</p>
-<div class="hero-actions">
-<a class="btn primary" href="#products" data-en>See products</a>
-<a class="btn primary" href="#products" data-so
-style="display:none">Eeg alaabta</a>
-<a class="btn ghost" href="order.html" data-en>Place an order</a>
-<a class="btn ghost" href="order.html" data-so
-style="display:none">Ka dalbo halkan</a>
-</div>
-</div>
-<div class="hero-visual" aria-hidden="true">
-<img src="assets/mockup_hero.png" alt="Product mockups" class="hero-
-img" />
-</div>
+
+<!-- Hero Banner -->
+<section id="hero" class="hero-banner">
+  <div class="carousel">
+    <div class="slide"><img src="assets/vitamin1.png" alt="Vitamin Men"></div>
+    <div class="slide"><img src="assets/vitamin2.png" alt="Vitamin Women"></div>
+    <div class="slide"><img src="assets/vitamin3.png" alt="Vitamin Children"></div>
+    <div class="slide"><img src="assets/vitamin4.png" alt="Vitamin Elderly"></div>
+    <div class="slide"><img src="assets/vitamin5.png" alt="Vitamin General"></div>
+  </div>
+  <div class="hero-text">
+    <h1 data-en="Clear, Trusted Vitamins for Everyone" data-so="Fiitamiinada Cad, La Aamini Karo, Dhammaan Dadka">
+      Clear, Trusted Vitamins for Everyone
+    </h1>
+    <button class="cta-btn" data-en="Shop Now" data-so="Iibso Hadda">Shop Now</button>
+  </div>
 </section>
-<section id="products" class="products-section section-inner">
-<h2 data-en>Product range</h2>
-<h2 data-so style="display:none">Alaabooyinkeenna</h2>
-2<div class="grid">
-<article class="product-card">
-<img src="assets/mockup_women.png" class="product-img" />
-<h3 data-en>Women — Iron 60mg + Folic</h3>
-<h3 data-so style="display:none">Haween — Ferro 60mg + Folic</h3>
-<a class="btn small" href="order.html?sku=CPF-W-001">Order</a>
-</article>
-<article class="product-card">
-<img src="assets/mockup_men.png" class="product-img" />
-<h3 data-en>Men — B-Complex + Zinc</h3>
-<h3 data-so style="display:none">Rag — B-Complex + Zinc</h3>
-<a class="btn small" href="order.html?sku=CPF-M-001">Order</a>
-</article>
-<article class="product-card">
-<img src="assets/mockup_kids.png" class="product-img" />
-<h3 data-en>Children — Multivitamin Syrup</h3>
-<h3 data-so style="display:none">Carruur — Multivitamin Syrup</h3>
-<a class="btn small" href="order.html?sku=CPF-K-001">Order</a>
-</article>
-</div>
+
+<!-- Products -->
+<section id="products">
+  <div class="container">
+    <div class="toggle-bar">
+      <button data-category="all">All</button>
+      <button data-category="men">Men</button>
+      <button data-category="women">Women</button>
+      <button data-category="children">Children</button>
+      <button data-category="elderly">Elderly</button>
+    </div>
+    <div class="product-grid">
+      <div class="product-card" data-category="men">
+        <img src="assets/vitamin1.png" alt="Vitamin Men">
+        <h3 data-en="Men's Multivitamin" data-so="Fiitamiin Rag">Men's Multivitamin</h3>
+        <p data-en="Supports energy & immunity" data-so="Taageerta tamar & difaac">Supports energy & immunity</p>
+        <span class="price">$19.99</span>
+        <button class="add-cart" data-id="1">Add to Cart</button>
+      </div>
+      <div class="product-card" data-category="women">
+        <img src="assets/vitamin2.png" alt="Vitamin Women">
+        <h3 data-en="Women's Multivitamin" data-so="Fiitamiin Dumar">Women's Multivitamin</h3>
+        <p data-en="Supports hormonal balance" data-so="Taageerta dheelitirka hormoonada">Supports hormonal balance</p>
+        <span class="price">$19.99</span>
+        <button class="add-cart" data-id="2">Add to Cart</button>
+      </div>
+      <div class="product-card" data-category="children">
+        <img src="assets/vitamin3.png" alt="Vitamin Children">
+        <h3 data-en="Kids Multivitamin" data-so="Fiitamiin Caruur">Kids Multivitamin</h3>
+        <p data-en="Supports growth & immunity" data-so="Taageerta koritaanka & difaaca">Supports growth & immunity</p>
+        <span class="price">$14.99</span>
+        <button class="add-cart" data-id="3">Add to Cart</button>
+      </div>
+      <div class="product-card" data-category="elderly">
+        <img src="assets/vitamin4.png" alt="Vitamin Elderly">
+        <h3 data-en="Senior Multivitamin" data-so="Fiitamiin Waayeel">Senior Multivitamin</h3>
+        <p data-en="Supports bones & immunity" data-so="Taageerta lafaha & difaaca">Supports bones & immunity</p>
+        <span class="price">$21.99</span>
+        <button class="add-cart" data-id="4">Add to Cart</button>
+      </div>
+      <div class="product-card" data-category="all">
+        <img src="assets/vitamin5.png" alt="Vitamin General">
+        <h3 data-en="General Multivitamin" data-so="Fiitamiin Guud">General Multivitamin</h3>
+        <p data-en="Daily health support" data-so="Taageero caafimaad maalinle">Daily health support</p>
+        <span class="price">$16.99</span>
+        <button class="add-cart" data-id="5">Add to Cart</button>
+      </div>
+    </div>
+  </div>
 </section>
-<section id="about" class="about section-inner">
-<h2 data-en>About Cleritas Pharma</h2>
-<h2 data-so style="display:none">Ku saabsan Cleritas Pharma</h2>
-<p data-en>We create bilingual Somali/English vitamin labeling with
-clear dosing, visible batch & expiry information, and tamper-evident
-packaging.</p>
-<p data-so style="display:none">Waxaan sameynaa fiitamiino af Soomaali/
-Ingiriis ku calaameedsan oo leh qiyaas cad, lambarka batch-ka iyo taariikh-
-dhicid.</p>
+
+<!-- About -->
+<section id="about">
+  <div class="container">
+    <h2 data-en="About Cleritas Pharma" data-so="Ku Saabsan Cleritas Pharma">About Cleritas Pharma</h2>
+    <p data-en="We provide clear labeled vitamins for men, women, children, and elderly. Our goal is transparency, trust, and health." 
+       data-so="Waxaan bixinaa fiitamiinada leh calaamad cad ragga, dumarka, caruurta iyo waayeelka. Hadafkayagu waa hufnaan, kalsooni, iyo caafimaad.">
+       We provide clear labeled vitamins for men, women, children, and elderly. Our goal is transparency, trust, and health.
+    </p>
+  </div>
 </section>
-<section id="contact" class="contact section-inner">
-<h2 data-en>Contact</h2>
-<h2 data-so style="display:none">Nala soo xiriir</h2>
-<p>Email: info@cleritaspharma.com</p>
-<p>WhatsApp: +45 42209661</p>
+
+<!-- Contact / Order -->
+<section id="contact">
+  <div class="container">
+    <h2 data-en="Order Now" data-so="Iibso Hadda">Order Now</h2>
+    <form id="order-form">
+      <input type="text" name="name" placeholder="Name / Magaca" required>
+      <input type="email" name="email" placeholder="Email / Iimayl" required>
+      <input type="text" name="address" placeholder="Address / Cinwaanka" required>
+      <select name="product" required>
+        <option value="1">Men's Multivitamin</option>
+        <option value="2">Women's Multivitamin</option>
+        <option value="3">Kids Multivitamin</option>
+        <option value="4">Senior Multivitamin</option>
+        <option value="5">General Multivitamin</option>
+      </select>
+      <input type="number" name="quantity" placeholder="Quantity / Tirada" min="1" value="1">
+      <button type="submit">Place Order</button>
+    </form>
+    <div id="order-msg"></div>
+  </div>
 </section>
-</main>
-<footer class="site-footer">
-<div class="section-inner footer-inner">
-<small>© Cleritas Pharma <span id="year"></span></small>
-<a href="order.html">Order</a>
-</div>
+
+<footer>
+  <div class="container">
+    <p>© 2025 Cleritas Pharma | Contact: ab@cleritaspharma.com</p>
+  </div>
 </footer>
+
+<script src="main.js"></script>
 </body>
 </html>
