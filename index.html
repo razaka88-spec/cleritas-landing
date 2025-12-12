@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Clear labeled vitamins for men, women, children, and elderly. Premium quality supplements from Cleritas Pharma.">
+  <meta name="keywords" content="vitamins, multivitamin, supplements, health, wellness">
   <title>Cleritas Pharma – Clear Labeled Vitamins</title>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -10,93 +12,132 @@
 
 <header>
   <div class="container">
-    <img src="assets/logo.png" alt="Cleritas Pharma" class="logo">
+    <div class="logo">Cleritas <span>Pharma</span></div>
     <nav>
       <ul>
         <li><a href="#hero">Home</a></li>
         <li><a href="#products">Products</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-    <div class="lang-toggle">
-      <button id="en-btn">🇬🇧</button>
-      <button id="so-btn">🇸🇴</button>
-    </div>
-    <div class="cart">
-      <span id="cart-count">0</span> 🛒
+    <div class="header-actions">
+      <div class="lang-toggle">
+        <button id="en-btn">🇬🇧</button>
+        <button id="so-btn">🇸🇴</button>
+      </div>
+      <button class="cart-btn" id="open-cart">
+        🛒 Cart
+        <span class="cart-count" id="cart-count">0</span>
+      </button>
     </div>
   </div>
 </header>
 
-<!-- Hero Banner -->
 <section id="hero" class="hero-banner">
   <div class="carousel">
-    <div class="slide"><img src="assets/vitamin1.png" alt="Vitamin Men"></div>
-    <div class="slide"><img src="assets/vitamin2.png" alt="Vitamin Women"></div>
-    <div class="slide"><img src="assets/vitamin3.png" alt="Vitamin Children"></div>
-    <div class="slide"><img src="assets/vitamin4.png" alt="Vitamin Elderly"></div>
-    <div class="slide"><img src="assets/vitamin5.png" alt="Vitamin General"></div>
+    <div class="slide">
+      <div class="slide-content">
+        <h2>💪</h2>
+        <p>Men's Multivitamin</p>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="slide-content">
+        <h2>👩</h2>
+        <p>Women's Multivitamin</p>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="slide-content">
+        <h2>👶</h2>
+        <p>Kids Multivitamin</p>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="slide-content">
+        <h2>👴</h2>
+        <p>Senior Multivitamin</p>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="slide-content">
+        <h2>✨</h2>
+        <p>General Multivitamin</p>
+      </div>
+    </div>
   </div>
   <div class="hero-text">
-    <h1 data-en="Clear, Trusted Vitamins for Everyone" data-so="Fiitamiinada Cad, La Aamini Karo, Dhammaan Dadka">
+    <h1 data-en="Clear, Trusted Vitamins for Everyone" data-so="Fiitamiinada Cad, La Aamini Karo">
       Clear, Trusted Vitamins for Everyone
     </h1>
-    <button class="cta-btn" data-en="Shop Now" data-so="Iibso Hadda">Shop Now</button>
+    <button class="cta-btn" data-en="Shop Now" data-so="Iibso Hadda" onclick="document.getElementById('products').scrollIntoView({behavior: 'smooth'})">
+      Shop Now
+    </button>
   </div>
 </section>
 
-<!-- Products -->
 <section id="products">
   <div class="container">
+    <h2 class="section-title" data-en="Our Products" data-so="Alaabteena">Our Products</h2>
+    <p class="section-subtitle" data-en="Premium vitamins tailored for every stage of life" data-so="Fiitamiinno heer sare ah oo loo habeeyay marxalad kasta oo nolosha">Premium vitamins tailored for every stage of life</p>
     <div class="toggle-bar">
-      <button data-category="all">All</button>
+      <button class="active" data-category="all">All</button>
       <button data-category="men">Men</button>
       <button data-category="women">Women</button>
       <button data-category="children">Children</button>
       <button data-category="elderly">Elderly</button>
+      <button data-category="general">General</button>
     </div>
-    <div class="product-grid">
-      <div class="product-card" data-category="men">
-        <img src="assets/vitamin1.png" alt="Vitamin Men">
-        <h3 data-en="Men's Multivitamin" data-so="Fiitamiin Rag">Men's Multivitamin</h3>
-        <p data-en="Supports energy & immunity" data-so="Taageerta tamar & difaac">Supports energy & immunity</p>
-        <span class="price">$19.99</span>
-        <button class="add-cart" data-id="1">Add to Cart</button>
+    <div class="product-grid" id="product-grid">
+      <div class="product-card show" data-category="men" data-id="1" data-price="19.99">
+        <div class="product-img">💪</div>
+        <div class="product-info">
+          <h3 data-en="Men's Multivitamin" data-so="Fiitamiin Rag">Men's Multivitamin</h3>
+          <p data-en="Supports energy & immunity" data-so="Taageerta tamar & difaac">Supports energy & immunity</p>
+          <span class="price">$19.99</span>
+          <button class="add-cart">Add to Cart</button>
+        </div>
       </div>
-      <div class="product-card" data-category="women">
-        <img src="assets/vitamin2.png" alt="Vitamin Women">
-        <h3 data-en="Women's Multivitamin" data-so="Fiitamiin Dumar">Women's Multivitamin</h3>
-        <p data-en="Supports hormonal balance" data-so="Taageerta dheelitirka hormoonada">Supports hormonal balance</p>
-        <span class="price">$19.99</span>
-        <button class="add-cart" data-id="2">Add to Cart</button>
+      <div class="product-card show" data-category="women" data-id="2" data-price="19.99">
+        <div class="product-img">👩</div>
+        <div class="product-info">
+          <h3 data-en="Women's Multivitamin" data-so="Fiitamiin Dumar">Women's Multivitamin</h3>
+          <p data-en="Supports hormonal balance" data-so="Taageerta dheelitirka hormoonada">Supports hormonal balance</p>
+          <span class="price">$19.99</span>
+          <button class="add-cart">Add to Cart</button>
+        </div>
       </div>
-      <div class="product-card" data-category="children">
-        <img src="assets/vitamin3.png" alt="Vitamin Children">
-        <h3 data-en="Kids Multivitamin" data-so="Fiitamiin Caruur">Kids Multivitamin</h3>
-        <p data-en="Supports growth & immunity" data-so="Taageerta koritaanka & difaaca">Supports growth & immunity</p>
-        <span class="price">$14.99</span>
-        <button class="add-cart" data-id="3">Add to Cart</button>
+      <div class="product-card show" data-category="children" data-id="3" data-price="14.99">
+        <div class="product-img">👶</div>
+        <div class="product-info">
+          <h3 data-en="Kids Multivitamin" data-so="Fiitamiin Caruur">Kids Multivitamin</h3>
+          <p data-en="Supports growth & immunity" data-so="Taageerta koritaanka & difaaca">Supports growth & immunity</p>
+          <span class="price">$14.99</span>
+          <button class="add-cart">Add to Cart</button>
+        </div>
       </div>
-      <div class="product-card" data-category="elderly">
-        <img src="assets/vitamin4.png" alt="Vitamin Elderly">
-        <h3 data-en="Senior Multivitamin" data-so="Fiitamiin Waayeel">Senior Multivitamin</h3>
-        <p data-en="Supports bones & immunity" data-so="Taageerta lafaha & difaaca">Supports bones & immunity</p>
-        <span class="price">$21.99</span>
-        <button class="add-cart" data-id="4">Add to Cart</button>
+      <div class="product-card show" data-category="elderly" data-id="4" data-price="21.99">
+        <div class="product-img">👴</div>
+        <div class="product-info">
+          <h3 data-en="Senior Multivitamin" data-so="Fiitamiin Waayeel">Senior Multivitamin</h3>
+          <p data-en="Supports bones & immunity" data-so="Taageerta lafaha & difaaca">Supports bones & immunity</p>
+          <span class="price">$21.99</span>
+          <button class="add-cart">Add to Cart</button>
+        </div>
       </div>
-      <div class="product-card" data-category="all">
-        <img src="assets/vitamin5.png" alt="Vitamin General">
-        <h3 data-en="General Multivitamin" data-so="Fiitamiin Guud">General Multivitamin</h3>
-        <p data-en="Daily health support" data-so="Taageero caafimaad maalinle">Daily health support</p>
-        <span class="price">$16.99</span>
-        <button class="add-cart" data-id="5">Add to Cart</button>
+      <div class="product-card show" data-category="general" data-id="5" data-price="16.99">
+        <div class="product-img">✨</div>
+        <div class="product-info">
+          <h3 data-en="General Multivitamin" data-so="Fiitamiin Guud">General Multivitamin</h3>
+          <p data-en="Daily health support" data-so="Taageero caafimaad maalinle">Daily health support</p>
+          <span class="price">$16.99</span>
+          <button class="add-cart">Add to Cart</button>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- About -->
 <section id="about">
   <div class="container">
     <h2 data-en="About Cleritas Pharma" data-so="Ku Saabsan Cleritas Pharma">About Cleritas Pharma</h2>
@@ -107,27 +148,19 @@
   </div>
 </section>
 
-<!-- Contact / Order -->
-<section id="contact">
-  <div class="container">
-    <h2 data-en="Order Now" data-so="Iibso Hadda">Order Now</h2>
-    <form id="order-form">
-      <input type="text" name="name" placeholder="Name / Magaca" required>
-      <input type="email" name="email" placeholder="Email / Iimayl" required>
-      <input type="text" name="address" placeholder="Address / Cinwaanka" required>
-      <select name="product" required>
-        <option value="1">Men's Multivitamin</option>
-        <option value="2">Women's Multivitamin</option>
-        <option value="3">Kids Multivitamin</option>
-        <option value="4">Senior Multivitamin</option>
-        <option value="5">General Multivitamin</option>
-      </select>
-      <input type="number" name="quantity" placeholder="Quantity / Tirada" min="1" value="1">
-      <button type="submit">Place Order</button>
-    </form>
-    <div id="order-msg"></div>
+<div class="modal" id="cart-modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2 data-en="Your Cart" data-so="Shantaada">Your Cart</h2>
+      <button class="close-modal" id="close-cart">&times;</button>
+    </div>
+    <div id="cart-view">
+      <div class="empty-cart">
+        <p data-en="Your cart is empty" data-so="Shantaadu waa madhan tahay">Your cart is empty</p>
+      </div>
+    </div>
   </div>
-</section>
+</div>
 
 <footer>
   <div class="container">
