@@ -3,84 +3,146 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Clear labeled vitamins for men, women, children, and elderly. Premium quality supplements from Cleritas Pharma.">
-  <meta name="keywords" content="vitamins, multivitamin, supplements, health, wellness">
-  <title>Cleritas Pharma – Clear Labeled Vitamins</title>
+  <meta name="description" content="Professional vitamin solutions for men, women, children, and elderly. Clear-labeled, pharmaceutical-grade supplements.">
+  <title>Cleritas Pharma - Clear Labeled Vitamins</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <header>
-  <div class="container">
-    <div class="logo">Cleritas <span>Pharma</span></div>
+  <div class="container header-container">
+    <div class="logo">Cleritas <strong>Pharma</strong></div>
     <nav>
       <ul>
-        <li><a href="#hero">Home</a></li>
+        <li><a href="#home">Home</a></li>
         <li><a href="#products">Products</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
     <div class="header-actions">
       <div class="lang-toggle">
-        <button id="en-btn">🇬🇧</button>
-        <button id="so-btn">🇸🇴</button>
+        <button id="en-btn">EN</button>
+        <button id="so-btn">SO</button>
       </div>
       <button class="cart-btn" id="open-cart">
-        🛒 Cart
-        <span class="cart-count" id="cart-count">0</span>
+        Cart <span class="cart-count" id="cart-count">0</span>
       </button>
     </div>
   </div>
 </header>
 
-<section id="hero" class="hero-banner">
-  <div class="carousel">
-    <div class="slide">
-      <div class="slide-content">
-        <h2>💪</h2>
-        <p>Men's Multivitamin</p>
-      </div>
+<section class="hero" id="home">
+  <div class="container hero-content">
+    <div class="hero-text">
+      <h1><strong>Clear, Trusted Vitamins</strong><br>for Everyone</h1>
+      <p>Professional vitamin solutions for men, women, children, and elderly. Our goal is transparency, trust, and health through pharmaceutical-grade supplements.</p>
+      <button class="cta-btn" onclick="document.getElementById('products').scrollIntoView({behavior: 'smooth'})">Shop Now</button>
     </div>
-    <div class="slide">
-      <div class="slide-content">
-        <h2>👩</h2>
-        <p>Women's Multivitamin</p>
-      </div>
+    <div class="hero-image">
+      <svg viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Bottle 1 - Men's (Blue) -->
+        <g>
+          <rect x="20" y="80" width="70" height="240" rx="6" fill="#ffffff" opacity="0.95"/>
+          <rect x="20" y="80" width="70" height="30" rx="6" fill="#667eea"/>
+          <rect x="32" y="55" width="46" height="40" rx="20" fill="#2c3e50"/>
+          <circle cx="55" cy="75" r="12" fill="#667eea"/>
+          <rect x="28" y="125" width="56" height="45" fill="#f8fafb"/>
+          <line x1="33" y1="135" x2="78" y2="135" stroke="#2c3e50" stroke-width="1.5"/>
+          <line x1="33" y1="145" x2="78" y2="145" stroke="#667eea" stroke-width="2"/>
+          <line x1="33" y1="155" x2="65" y2="155" stroke="#95a5a6" stroke-width="1"/>
+          <circle cx="45" cy="200" r="6" fill="#667eea" opacity="0.3"/>
+          <circle cx="55" cy="215" r="6" fill="#667eea" opacity="0.3"/>
+          <circle cx="65" cy="210" r="6" fill="#667eea" opacity="0.3"/>
+          <circle cx="50" cy="235" r="6" fill="#667eea" opacity="0.3"/>
+          <circle cx="60" cy="250" r="6" fill="#667eea" opacity="0.3"/>
+          <rect x="20" y="305" width="70" height="15" fill="#e8eef3"/>
+        </g>
+
+        <!-- Bottle 2 - Women's (Pink) -->
+        <g>
+          <rect x="110" y="80" width="70" height="240" rx="6" fill="#ffffff" opacity="0.95"/>
+          <rect x="110" y="80" width="70" height="30" rx="6" fill="#f093fb"/>
+          <rect x="122" y="55" width="46" height="40" rx="20" fill="#2c3e50"/>
+          <circle cx="145" cy="75" r="12" fill="#f093fb"/>
+          <rect x="118" y="125" width="56" height="45" fill="#f8fafb"/>
+          <line x1="123" y1="135" x2="168" y2="135" stroke="#2c3e50" stroke-width="1.5"/>
+          <line x1="123" y1="145" x2="168" y2="145" stroke="#f093fb" stroke-width="2"/>
+          <line x1="123" y1="155" x2="155" y2="155" stroke="#95a5a6" stroke-width="1"/>
+          <circle cx="135" cy="200" r="6" fill="#f093fb" opacity="0.3"/>
+          <circle cx="145" cy="215" r="6" fill="#f093fb" opacity="0.3"/>
+          <circle cx="155" cy="210" r="6" fill="#f093fb" opacity="0.3"/>
+          <circle cx="140" cy="235" r="6" fill="#f093fb" opacity="0.3"/>
+          <circle cx="150" cy="250" r="6" fill="#f093fb" opacity="0.3"/>
+          <rect x="110" y="305" width="70" height="15" fill="#e8eef3"/>
+        </g>
+
+        <!-- Bottle 3 - Kids (Cyan) -->
+        <g>
+          <rect x="200" y="80" width="70" height="240" rx="6" fill="#ffffff" opacity="0.95"/>
+          <rect x="200" y="80" width="70" height="30" rx="6" fill="#4facfe"/>
+          <rect x="212" y="55" width="46" height="40" rx="20" fill="#2c3e50"/>
+          <circle cx="235" cy="75" r="12" fill="#4facfe"/>
+          <rect x="208" y="125" width="56" height="45" fill="#f8fafb"/>
+          <line x1="213" y1="135" x2="258" y2="135" stroke="#2c3e50" stroke-width="1.5"/>
+          <line x1="213" y1="145" x2="258" y2="145" stroke="#4facfe" stroke-width="2"/>
+          <line x1="213" y1="155" x2="245" y2="155" stroke="#95a5a6" stroke-width="1"/>
+          <circle cx="225" cy="200" r="6" fill="#4facfe" opacity="0.3"/>
+          <circle cx="235" cy="215" r="6" fill="#4facfe" opacity="0.3"/>
+          <circle cx="245" cy="210" r="6" fill="#4facfe" opacity="0.3"/>
+          <circle cx="230" cy="235" r="6" fill="#4facfe" opacity="0.3"/>
+          <circle cx="240" cy="250" r="6" fill="#4facfe" opacity="0.3"/>
+          <rect x="200" y="305" width="70" height="15" fill="#e8eef3"/>
+        </g>
+
+        <!-- Bottle 4 - Elderly (Green) -->
+        <g>
+          <rect x="290" y="80" width="70" height="240" rx="6" fill="#ffffff" opacity="0.95"/>
+          <rect x="290" y="80" width="70" height="30" rx="6" fill="#43e97b"/>
+          <rect x="302" y="55" width="46" height="40" rx="20" fill="#2c3e50"/>
+          <circle cx="325" cy="75" r="12" fill="#43e97b"/>
+          <rect x="298" y="125" width="56" height="45" fill="#f8fafb"/>
+          <line x1="303" y1="135" x2="348" y2="135" stroke="#2c3e50" stroke-width="1.5"/>
+          <line x1="303" y1="145" x2="348" y2="145" stroke="#43e97b" stroke-width="2"/>
+          <line x1="303" y1="155" x2="335" y2="155" stroke="#95a5a6" stroke-width="1"/>
+          <circle cx="315" cy="200" r="6" fill="#43e97b" opacity="0.3"/>
+          <circle cx="325" cy="215" r="6" fill="#43e97b" opacity="0.3"/>
+          <circle cx="335" cy="210" r="6" fill="#43e97b" opacity="0.3"/>
+          <circle cx="320" cy="235" r="6" fill="#43e97b" opacity="0.3"/>
+          <circle cx="330" cy="250" r="6" fill="#43e97b" opacity="0.3"/>
+          <rect x="290" y="305" width="70" height="15" fill="#e8eef3"/>
+        </g>
+
+        <!-- Bottle 5 - General (Orange/Pink) -->
+        <g>
+          <rect x="380" y="80" width="70" height="240" rx="6" fill="#ffffff" opacity="0.95"/>
+          <rect x="380" y="80" width="70" height="30" rx="6" fill="#fa709a"/>
+          <rect x="392" y="55" width="46" height="40" rx="20" fill="#2c3e50"/>
+          <circle cx="415" cy="75" r="12" fill="#fa709a"/>
+          <rect x="388" y="125" width="56" height="45" fill="#f8fafb"/>
+          <line x1="393" y1="135" x2="438" y2="135" stroke="#2c3e50" stroke-width="1.5"/>
+          <line x1="393" y1="145" x2="438" y2="145" stroke="#fa709a" stroke-width="2"/>
+          <line x1="393" y1="155" x2="425" y2="155" stroke="#95a5a6" stroke-width="1"/>
+          <circle cx="405" cy="200" r="6" fill="#fa709a" opacity="0.3"/>
+          <circle cx="415" cy="215" r="6" fill="#fa709a" opacity="0.3"/>
+          <circle cx="425" cy="210" r="6" fill="#fa709a" opacity="0.3"/>
+          <circle cx="410" cy="235" r="6" fill="#fa709a" opacity="0.3"/>
+          <circle cx="420" cy="250" r="6" fill="#fa709a" opacity="0.3"/>
+          <rect x="380" y="305" width="70" height="15" fill="#e8eef3"/>
+        </g>
+      </svg>
     </div>
-    <div class="slide">
-      <div class="slide-content">
-        <h2>👶</h2>
-        <p>Kids Multivitamin</p>
-      </div>
-    </div>
-    <div class="slide">
-      <div class="slide-content">
-        <h2>👴</h2>
-        <p>Senior Multivitamin</p>
-      </div>
-    </div>
-    <div class="slide">
-      <div class="slide-content">
-        <h2>✨</h2>
-        <p>General Multivitamin</p>
-      </div>
-    </div>
-  </div>
-  <div class="hero-text">
-    <h1 data-en="Clear, Trusted Vitamins for Everyone" data-so="Fiitamiinada Cad, La Aamini Karo">
-      Clear, Trusted Vitamins for Everyone
-    </h1>
-    <button class="cta-btn" data-en="Shop Now" data-so="Iibso Hadda" onclick="document.getElementById('products').scrollIntoView({behavior: 'smooth'})">
-      Shop Now
-    </button>
   </div>
 </section>
 
 <section id="products">
   <div class="container">
-    <h2 class="section-title" data-en="Our Products" data-so="Alaabteena">Our Products</h2>
-    <p class="section-subtitle" data-en="Premium vitamins tailored for every stage of life" data-so="Fiitamiinno heer sare ah oo loo habeeyay marxalad kasta oo nolosha">Premium vitamins tailored for every stage of life</p>
-    <div class="toggle-bar">
+    <div class="section-header">
+      <h2 class="section-title">Our Products</h2>
+      <p class="section-subtitle">Premium vitamins tailored for every stage of life</p>
+    </div>
+
+    <div class="filter-bar">
       <button class="active" data-category="all">All</button>
       <button data-category="men">Men</button>
       <button data-category="women">Women</button>
@@ -88,50 +150,107 @@
       <button data-category="elderly">Elderly</button>
       <button data-category="general">General</button>
     </div>
-    <div class="product-grid" id="product-grid">
+
+    <div class="product-grid">
       <div class="product-card show" data-category="men" data-id="1" data-price="19.99">
-        <div class="product-img">💪</div>
+        <div class="product-image">
+          <svg viewBox="0 0 80 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="25" width="60" height="120" rx="5" fill="#667eea" opacity="0.2"/>
+            <rect x="10" y="25" width="60" height="20" rx="5" fill="#667eea"/>
+            <rect x="22" y="10" width="36" height="28" rx="14" fill="#2c3e50"/>
+            <circle cx="40" cy="24" r="8" fill="#667eea"/>
+          </svg>
+        </div>
         <div class="product-info">
-          <h3 data-en="Men's Multivitamin" data-so="Fiitamiin Rag">Men's Multivitamin</h3>
-          <p data-en="Supports energy & immunity" data-so="Taageerta tamar & difaac">Supports energy & immunity</p>
-          <span class="price">$19.99</span>
-          <button class="add-cart">Add to Cart</button>
+          <h3>Men's Multivitamin</h3>
+          <p>Supports energy & immunity</p>
+          <span class="product-price">$19.99</span>
+          <button class="btn-add">Add to Cart</button>
         </div>
       </div>
+
       <div class="product-card show" data-category="women" data-id="2" data-price="19.99">
-        <div class="product-img">👩</div>
+        <div class="product-image">
+          <svg viewBox="0 0 80 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="25" width="60" height="120" rx="5" fill="#f093fb" opacity="0.2"/>
+            <rect x="10" y="25" width="60" height="20" rx="5" fill="#f093fb"/>
+            <rect x="22" y="10" width="36" height="28" rx="14" fill="#2c3e50"/>
+            <circle cx="40" cy="24" r="8" fill="#f093fb"/>
+          </svg>
+        </div>
         <div class="product-info">
-          <h3 data-en="Women's Multivitamin" data-so="Fiitamiin Dumar">Women's Multivitamin</h3>
-          <p data-en="Supports hormonal balance" data-so="Taageerta dheelitirka hormoonada">Supports hormonal balance</p>
-          <span class="price">$19.99</span>
-          <button class="add-cart">Add to Cart</button>
+          <h3>Women's Multivitamin</h3>
+          <p>Supports hormonal balance</p>
+          <span class="product-price">$19.99</span>
+          <button class="btn-add">Add to Cart</button>
         </div>
       </div>
+
       <div class="product-card show" data-category="children" data-id="3" data-price="14.99">
-        <div class="product-img">👶</div>
+        <div class="product-image">
+          <svg viewBox="0 0 80 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="25" width="60" height="120" rx="5" fill="#4facfe" opacity="0.2"/>
+            <rect x="10" y="25" width="60" height="20" rx="5" fill="#4facfe"/>
+            <rect x="22" y="10" width="36" height="28" rx="14" fill="#2c3e50"/>
+            <circle cx="40" cy="24" r="8" fill="#4facfe"/>
+          </svg>
+        </div>
         <div class="product-info">
-          <h3 data-en="Kids Multivitamin" data-so="Fiitamiin Caruur">Kids Multivitamin</h3>
-          <p data-en="Supports growth & immunity" data-so="Taageerta koritaanka & difaaca">Supports growth & immunity</p>
-          <span class="price">$14.99</span>
-          <button class="add-cart">Add to Cart</button>
+          <h3>Kids Multivitamin</h3>
+          <p>Supports growth & immunity</p>
+          <span class="product-price">$14.99</span>
+          <button class="btn-add">Add to Cart</button>
         </div>
       </div>
+
       <div class="product-card show" data-category="elderly" data-id="4" data-price="21.99">
-        <div class="product-img">👴</div>
+        <div class="product-image">
+          <svg viewBox="0 0 80 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="25" width="60" height="120" rx="5" fill="#43e97b" opacity="0.2"/>
+            <rect x="10" y="25" width="60" height="20" rx="5" fill="#43e97b"/>
+            <rect x="22" y="10" width="36" height="28" rx="14" fill="#2c3e50"/>
+            <circle cx="40" cy="24" r="8" fill="#43e97b"/>
+          </svg>
+        </div>
         <div class="product-info">
-          <h3 data-en="Senior Multivitamin" data-so="Fiitamiin Waayeel">Senior Multivitamin</h3>
-          <p data-en="Supports bones & immunity" data-so="Taageerta lafaha & difaaca">Supports bones & immunity</p>
-          <span class="price">$21.99</span>
-          <button class="add-cart">Add to Cart</button>
+          <h3>Senior Multivitamin</h3>
+          <p>Supports bones & immunity</p>
+          <span class="product-price">$21.99</span>
+          <button class="btn-add">Add to Cart</button>
         </div>
       </div>
+
       <div class="product-card show" data-category="general" data-id="5" data-price="16.99">
-        <div class="product-img">✨</div>
+        <div class="product-image">
+          <svg viewBox="0 0 80 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="25" width="60" height="120" rx="5" fill="#fa709a" opacity="0.2"/>
+            <rect x="10" y="25" width="60" height="20" rx="5" fill="#fa709a"/>
+            <rect x="22" y="10" width="36" height="28" rx="14" fill="#2c3e50"/>
+            <circle cx="40" cy="24" r="8" fill="#fa709a"/>
+          </svg>
+        </div>
         <div class="product-info">
-          <h3 data-en="General Multivitamin" data-so="Fiitamiin Guud">General Multivitamin</h3>
-          <p data-en="Daily health support" data-so="Taageero caafimaad maalinle">Daily health support</p>
-          <span class="price">$16.99</span>
-          <button class="add-cart">Add to Cart</button>
+          <h3>General Multivitamin</h3>
+          <p>Daily health support</p>
+          <span class="product-price">$16.99</span>
+          <button class="btn-add">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="product-card show" data-category="general" data-id="6" data-price="24.99">
+        <div class="product-image">
+          <svg viewBox="0 0 80 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="25" width="60" height="120" rx="5" fill="#3498db" opacity="0.2"/>
+            <rect x="10" y="25" width="60" height="20" rx="5" fill="#3498db"/>
+            <rect x="22" y="10" width="36" height="28" rx="14" fill="#2c3e50"/>
+            <circle cx="40" cy="24" r="8" fill="#3498db"/>
+          </svg>
+        </div>
+        <div class="product-info">
+          <h3>Active Lifestyle Formula</h3>
+          <p>Enhanced support for active individuals</p>
+          <span class="product-price">$24.99</span>
+          <button class="btn-add">Add to Cart</button>
         </div>
       </div>
     </div>
@@ -139,32 +258,67 @@
 </section>
 
 <section id="about">
+  <div class="container about-content">
+    <h2>About Cleritas Pharma</h2>
+    <p>We provide clear labeled vitamins for men, women, children, and elderly. Our goal is transparency, trust, and health through pharmaceutical-grade supplements developed in collaboration with healthcare professionals.</p>
+  </div>
+</section>
+
+<section id="contact">
   <div class="container">
-    <h2 data-en="About Cleritas Pharma" data-so="Ku Saabsan Cleritas Pharma">About Cleritas Pharma</h2>
-    <p data-en="We provide clear labeled vitamins for men, women, children, and elderly. Our goal is transparency, trust, and health." 
-       data-so="Waxaan bixinaa fiitamiinada leh calaamad cad ragga, dumarka, caruurta iyo waayeelka. Hadafkayagu waa hufnaan, kalsooni, iyo caafimaad.">
-       We provide clear labeled vitamins for men, women, children, and elderly. Our goal is transparency, trust, and health.
-    </p>
+    <div class="section-header">
+      <h2 class="section-title">Contact Us</h2>
+    </div>
+    
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Cleritas Pharma</h3>
+        <p><strong>Production Facility</strong></p>
+        <p>123 Pharmaceutical Drive<br>Aarhus 8000, Denmark</p>
+        <p><strong>Phone:</strong> +45 12 34 56 78</p>
+        <p><strong>Email:</strong> <a href="mailto:ab@cleritaspharma.com">ab@cleritaspharma.com</a></p>
+        <p style="margin-top: 2rem;"><strong>Business Hours:</strong><br>
+        Monday - Friday: 9:00 - 17:00<br>
+        Saturday - Sunday: Closed</p>
+      </div>
+
+      <div class="contact-form">
+        <form id="contact-form">
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" name="name" required>
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea name="message" required></textarea>
+          </div>
+          <button type="submit" class="btn-add">Send Message</button>
+        </form>
+      </div>
+    </div>
   </div>
 </section>
 
 <div class="modal" id="cart-modal">
   <div class="modal-content">
     <div class="modal-header">
-      <h2 data-en="Your Cart" data-so="Shantaada">Your Cart</h2>
+      <h2>Your Cart</h2>
       <button class="close-modal" id="close-cart">&times;</button>
     </div>
-    <div id="cart-view">
-      <div class="empty-cart">
-        <p data-en="Your cart is empty" data-so="Shantaadu waa madhan tahay">Your cart is empty</p>
-      </div>
+    <div class="modal-body" id="cart-body">
+      <p class="empty-cart">Your cart is empty</p>
     </div>
   </div>
 </div>
 
 <footer>
   <div class="container">
-    <p>© 2025 Cleritas Pharma | Contact: ab@cleritaspharma.com</p>
+    <p><strong>Cleritas Pharma</strong> - Professional Vitamin Solutions</p>
+    <p>© 2025 Cleritas Pharma. All rights reserved.</p>
   </div>
 </footer>
 
