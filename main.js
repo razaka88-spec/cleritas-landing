@@ -7,7 +7,6 @@ const products = {
   '3': { name: "Kids Multivitamin", price: 14.99 },
   '4': { name: "Senior Multivitamin", price: 21.99 },
   '5': { name: "General Multivitamin", price: 16.99 },
-  '6': { name: "Active Lifestyle Formula", price: 24.99 }
 };
 
 // Language toggle
@@ -223,6 +222,17 @@ function closeAndReset() {
 }
 
 // Contact form
+async function sendContactForm(email, message) {
+  const res = await fetch("/contact", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ email, message })
+  });
+
+  const data = await res.json();
+  console.log(data);
+}
+
 document.getElementById('contact-form').addEventListener('submit', (e) => {
   e.preventDefault();
   showNotification('Message sent successfully');
