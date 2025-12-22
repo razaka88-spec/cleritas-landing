@@ -1,0 +1,11 @@
+{
+  "name": "cleritas-pharma",
+  "main": "worker.js",
+  "compatibility_date": "2025-12-20",
+  "kv_namespaces": [
+    {
+      "binding": "ORDERS",
+      "id": "YOUR_KV_NAMESPACE_ID"
+    }
+  ]
+}
