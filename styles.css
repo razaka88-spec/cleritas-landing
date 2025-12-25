@@ -178,9 +178,9 @@ nav a:hover {
 
 .hero-image svg {
   width: 100%;
-  max-width: 500px;
+  max-width: 420px;
   height: auto;
-  filter: drop-shadow(0 8px 16px rgba(0,0,0,0.2));
+  filter: drop-shadow(0 6px 12px rgba(0,0,0,0.15));
 }
 
 /* Products Section */
@@ -266,7 +266,7 @@ nav a:hover {
 
 .product-image {
   width: 100%;
-  height: 240px;
+  height: 200px;
   background: #f8fafb;
   display: flex;
   align-items: center;
@@ -275,8 +275,8 @@ nav a:hover {
 }
 
 .product-image svg {
-  width: 100px;
-  height: 240px;
+  width: 90px;
+  height: 200px;
 }
 
 .product-card[data-category="men"] .product-image { 
@@ -692,5 +692,52 @@ footer p {
 
   .featured-bottle img {
     height: 140px;
+  }
+}
+
+/* ============================
+   LIFE-STAGE OVERVIEW (CALM)
+============================ */
+
+.life-stage-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 2.5rem auto 3rem;
+  text-align: center;
+}
+
+.life-stage-item {
+  padding: 1.5rem 1rem;
+  background: white;
+  border: 1px solid #e8eef3;
+  border-radius: 4px;
+}
+
+.ls-title {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.3rem;
+}
+
+.ls-sub {
+  font-size: 0.8rem;
+  color: #5a6c7d;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .life-stage-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .life-stage-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
   }
 }
