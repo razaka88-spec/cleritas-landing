@@ -636,3 +636,61 @@ footer p {
   from { transform: translateX(100%); opacity: 0; }
   to { transform: translateX(0); opacity: 1; }
 }
+
+/* ================================
+   FEATURED BOTTLES (OPTIMIZED)
+================================ */
+
+.featured-bottles {
+  max-width: 1100px;
+  margin: 2.5rem auto 3.5rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2.5rem;
+  text-align: center;
+}
+
+.featured-bottle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Smaller, calmer bottles */
+.featured-bottle img {
+  height: 160px;
+  width: auto;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 6px 10px rgba(0,0,0,0.08));
+}
+
+/* Typography aligned with site */
+.fb-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.2rem;
+}
+
+.fb-subtitle {
+  font-size: 0.8rem;
+  color: #5a6c7d;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .featured-bottles {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .featured-bottles {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .featured-bottle img {
+    height: 140px;
+  }
+}
