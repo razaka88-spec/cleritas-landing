@@ -1,17 +1,20 @@
 let cart = [];
 let currentLang = 'en';
 
+// Updated products for 4 items
 const products = {
-  '1': { name: "Men's Multivitamin", price: 19.99 },
-  '2': { name: "Women's Multivitamin", price: 19.99 },
-  '3': { name: "Kids Multivitamin", price: 14.99 },
-  '4': { name: "Senior Multivitamin", price: 21.99 },
-  '5': { name: "General Multivitamin", price: 16.99 },
+  '1': { name: "Women's Folic Acid + Pregnancy", price: 24.99 },
+  '2': { name: "Iron + Vitamin C", price: 18.99 },
+  '3': { name: "General Multivitamin", price: 16.99 },
+  '4': { name: "Children's Chewable Vitamins", price: 14.99 }
 };
 
 // Language toggle
 document.querySelectorAll('.lang-toggle button').forEach(btn => {
   btn.addEventListener('click', () => {
+    document.querySelectorAll('.lang-toggle button').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    
     currentLang = btn.id.split('-')[0];
     document.querySelectorAll('[data-en]').forEach(el => {
       if (el.dataset[currentLang]) {
@@ -21,27 +24,12 @@ document.querySelectorAll('.lang-toggle button').forEach(btn => {
   });
 });
 
-// Category filter
-document.querySelectorAll('.filter-bar button').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.filter-bar button').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    
-    const cat = btn.dataset.category;
-    document.querySelectorAll('.product-card').forEach(card => {
-      if (cat === 'all' || card.dataset.category === cat) {
-        card.classList.add('show');
-      } else {
-        card.classList.remove('show');
-      }
-    });
-  });
-});
-
 // Add to cart
 document.querySelectorAll('.btn-add').forEach(btn => {
   btn.addEventListener('click', (e) => {
     const card = e.target.closest('.product-card');
+    if (!card) return;
+    
     const id = card.dataset.id;
     const price = parseFloat(card.dataset.price);
     const name = card.querySelector('h3').textContent;
@@ -156,47 +144,86 @@ function removeItem(i) {
   renderCart();
 }
 
+// Submit order via Formspree
 async function submitOrder(e) {
   e.preventDefault();
   const form = e.target;
   const formData = new FormData(form);
   
-  const orderData = {
+  const submitBtn = form.querySelector('button[type="submit"]');
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Processing...';
+  
+  // Prepare order details
+  const orderDetails = {
     customer: {
       name: formData.get('name'),
       email: formData.get('email'),
       phone: formData.get('phone'),
       address: formData.get('address')
     },
-    items: cart,
-    total: cart.reduce((sum, item) => sum + (item.price * item.quantity), 0),
-    timestamp: new Date().toISOString()
+    items: cart.map(item => ({
+      product: item.name,
+      quantity: item.quantity,
+      price: item.price,
+      subtotal: (item.price * item.quantity).toFixed(2)
+    })),
+    total: cart.reduce((sum, item) => sum + (item.price * item.quantity), 0).toFixed(2),
+    orderId: 'ORD-' + Date.now(),
+    date: new Date().toLocaleString()
   };
-  
-  const submitBtn = form.querySelector('button[type="submit"]');
-  submitBtn.disabled = true;
-  submitBtn.textContent = 'Processing...';
-  
+
+  // Create email body
+  const emailBody = `
+NEW ORDER RECEIVED!
+
+Order ID: ${orderDetails.orderId}
+Date: ${orderDetails.date}
+
+CUSTOMER INFORMATION:
+Name: ${orderDetails.customer.name}
+Email: ${orderDetails.customer.email}
+Phone: ${orderDetails.customer.phone}
+Address: ${orderDetails.customer.address}
+
+ORDER ITEMS:
+${orderDetails.items.map(item => 
+  `- ${item.product} × ${item.quantity} = $${item.subtotal}`
+).join('\n')}
+
+TOTAL: $${orderDetails.total}
+
+---
+This order was placed through Cleritas Pharma website.
+  `;
+
   try {
-    // Replace with your actual Cloudflare Worker URL
-    const response = await fetch('https://your-worker-url.workers.dev/orders', {
+    // Using Formspree - Replace YOUR_FORM_ID with your actual Formspree form ID
+    // Get your form ID from https://formspree.io (free, no credit card needed)
+    const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(orderData)
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        name: orderDetails.customer.name,
+        email: orderDetails.customer.email,
+        phone: orderDetails.customer.phone,
+        subject: `New Order - ${orderDetails.orderId}`,
+        message: emailBody
+      })
     });
-    
+
     if (response.ok) {
-      const result = await response.json();
-      showOrderSuccess(result.orderId || 'ORD-' + Date.now(), orderData.total);
+      showOrderSuccess(orderDetails.orderId, orderDetails.total);
     } else {
-      throw new Error('Order failed');
+      throw new Error('Order submission failed');
     }
   } catch (error) {
     console.error('Order error:', error);
-    // Fallback for demo
-    setTimeout(() => {
-      showOrderSuccess('ORD-' + Date.now(), orderData.total);
-    }, 1500);
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Place Order';
+    alert('There was an error processing your order. Please try again or contact us directly at ab@cleritaspharma.com');
   }
 }
 
@@ -205,13 +232,13 @@ function showOrderSuccess(orderId, total) {
     <div style="text-align: center; padding: 3rem 2rem;">
       <h3 style="color: #27ae60; margin-bottom: 1.5rem; font-size: 2rem;">✓ Order Placed Successfully!</h3>
       <p style="color: #5a6c7d; margin-bottom: 1rem; font-size: 1.05rem;">Order ID: <strong>${orderId}</strong></p>
-      <p style="color: #5a6c7d; margin-bottom: 1rem; font-size: 1.05rem;">Total: <strong>$${total.toFixed(2)}</strong></p>
-      <p style="color: #95a5a6; margin-top: 2rem;">We'll send a confirmation email shortly</p>
+      <p style="color: #5a6c7d; margin-bottom: 1rem; font-size: 1.05rem;">Total: <strong>$${total}</strong></p>
+      <p style="color: #95a5a6; margin-top: 2rem;">We've received your order and will contact you shortly via email or phone to confirm.</p>
       <button onclick="closeAndReset()" class="btn-add" style="margin-top: 2rem;">Continue Shopping</button>
     </div>
   `;
   
-  console.log('Order placed:', { orderId, total, items: cart });
+  console.log('Order placed:', orderId);
 }
 
 function closeAndReset() {
@@ -221,20 +248,41 @@ function closeAndReset() {
   showNotification('Thank you for your order!');
 }
 
-// Contact form
-async function sendContactForm(email, message) {
-  const res = await fetch("/contact", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ email, message })
-  });
-
-  const data = await res.json();
-  console.log(data);
-}
-
-document.getElementById('contact-form').addEventListener('submit', (e) => {
+// Contact form via Formspree
+document.getElementById('contact-form').addEventListener('submit', async (e) => {
   e.preventDefault();
-  showNotification('Message sent successfully');
-  e.target.reset();
+  const form = e.target;
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const formData = new FormData(form);
+  
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Sending...';
+
+  try {
+    // Using Formspree - Replace YOUR_CONTACT_FORM_ID with your actual form ID
+    const response = await fetch('https://formspree.io/f/YOUR_CONTACT_FORM_ID', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        name: formData.get('name'),
+        email: formData.get('email'),
+        message: formData.get('message')
+      })
+    });
+
+    if (response.ok) {
+      showNotification('Message sent successfully!');
+      form.reset();
+    } else {
+      throw new Error('Failed to send message');
+    }
+  } catch (error) {
+    console.error('Contact error:', error);
+    alert('Failed to send message. Please email us directly at ab@cleritaspharma.com');
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Send Message';
+  }
 });
