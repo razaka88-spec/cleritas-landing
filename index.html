@@ -4,15 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Professional vitamins: Women's Folic Acid & Pregnancy Support, Iron + Vitamin C, General Multivitamin, and Children's Chewable Vitamins. Clear-labeled, pharmaceutical-grade supplements.">
+  <meta name="keywords" content="vitamins, supplements, folic acid, iron, multivitamin, children's vitamins, pharmaceutical grade, clear labeled">
+  <meta name="author" content="Cleritas Pharma">
+  <meta property="og:title" content="Cleritas Pharma - Clear Labeled Vitamins">
+  <meta property="og:description" content="Professional vitamin solutions for women, families, and children. Pharmaceutical-grade supplements with transparent labeling.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
   <title>Cleritas Pharma - Clear Labeled Vitamins</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
 </head>
 <body>
+<a href="#main" class="skip-link">Skip to main content</a>
 
-<header>
+<header role="banner">
   <div class="container header-container">
-    <div class="logo">Cleritas <strong>Pharma</strong></div>
-    <nav>
+    <div class="logo" role="img" aria-label="Cleritas Pharma Logo">Cleritas <strong>Pharma</strong></div>
+    <nav role="navigation" aria-label="Main navigation">
       <ul>
         <li><a href="#home" data-en="Home" data-so="Guriga">Home</a></li>
         <li><a href="#products" data-en="Products" data-so="Alaabta">Products</a></li>
@@ -21,19 +30,19 @@
       </ul>
     </nav>
     <div class="header-actions">
-      <div class="lang-toggle">
-        <button id="en-btn" class="active">EN</button>
-        <button id="so-btn">SO</button>
+      <div class="lang-toggle" role="group" aria-label="Language selection">
+        <button id="en-btn" class="active" aria-pressed="true" aria-label="English">EN</button>
+        <button id="so-btn" aria-pressed="false" aria-label="Somali">SO</button>
       </div>
-      <button class="cart-btn" id="open-cart">
+      <button class="cart-btn" id="open-cart" aria-label="Shopping cart with 0 items">
         <span data-en="Cart" data-so="Shanta">Cart</span>
-        <span class="cart-count" id="cart-count">0</span>
+        <span class="cart-count" id="cart-count" aria-live="polite">0</span>
       </button>
     </div>
   </div>
 </header>
 
-<section class="hero" id="home">
+<section class="hero" id="home" role="banner">
   <div class="hero-container">
     <div class="hero-text">
       <h1 data-en="Clear, Trusted Vitamins for Everyone" data-so="Fiitamiino Cad oo La Aaminsan Karo Dhammaan Dadka">
@@ -43,23 +52,24 @@
         Professional vitamin solutions for women, families, and children.
         Our goal is transparency, trust, and health through pharmaceutical-grade supplements.
       </p>
-      <button class="cta-btn" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">
+      <button class="cta-btn" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})" aria-label="Shop our vitamin products">
         Shop Now
       </button>
     </div>
   </div>
 </section>
 
-<section id="products">
+<main id="main">
+<section id="products" aria-labelledby="products-heading">
   <div class="container">
-    <h2>Our Products</h2>
+    <h2 id="products-heading">Our Products</h2>
     <!-- products unchanged -->
   </div>
 </section>
 
-<section id="about">
+<section id="about" aria-labelledby="about-heading">
   <div class="container about-content">
-    <h2>About Cleritas Pharma</h2>
+    <h2 id="about-heading">About Cleritas Pharma</h2>
     <p>
       We provide clear-labeled vitamins for women, families, and children.
       Our products are developed with transparency, trust, and pharmaceutical standards in mind.
@@ -67,9 +77,9 @@
   </div>
 </section>
 
-<section id="contact">
+<section id="contact" aria-labelledby="contact-heading">
   <div class="container">
-    <h2>Contact Us</h2>
+    <h2 id="contact-heading">Contact Us</h2>
 
     <div class="contact-grid">
       <div class="contact-info">
@@ -98,15 +108,16 @@
       </div>
 
       <div class="contact-form">
-        <form id="contact-form">
-          <label>Full Name</label>
-          <input type="text" name="name" required>
+        <form id="contact-form" aria-labelledby="contact-form-heading">
+          <h3 id="contact-form-heading" class="sr-only">Send us a message</h3>
+          <label for="contact-name">Full Name</label>
+          <input type="text" id="contact-name" name="name" required>
 
-          <label>Email</label>
-          <input type="email" name="email" required>
+          <label for="contact-email">Email</label>
+          <input type="email" id="contact-email" name="email" required>
 
-          <label>Message</label>
-          <textarea name="message" required></textarea>
+          <label for="contact-message">Message</label>
+          <textarea id="contact-message" name="message" required></textarea>
 
           <button type="submit" class="btn-add">Send Message</button>
         </form>
@@ -114,8 +125,9 @@
     </div>
   </div>
 </section>
+</main>
 
-<footer>
+<footer role="contentinfo">
   <div class="container">
     <p>
       <strong>Cleritas Pharma</strong> – Professional Vitamin Solutions
