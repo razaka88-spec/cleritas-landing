@@ -179,31 +179,40 @@ function initContactForm() {
   }
 }
 
-function handleContactSubmit(e) {
+async function handleContactSubmit(e) {
   e.preventDefault();
-  
   const formData = new FormData(elements.contactForm);
   const data = Object.fromEntries(formData);
   
-  // Basic validation
   if (!data.name || !data.email || !data.message) {
     showNotification('Please fill in all fields', 'error');
     return;
   }
   
-  // Email validation
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(data.email)) {
     showNotification('Please enter a valid email address', 'error');
     return;
   }
   
-  // Simulate form submission
-  showNotification('Message sent successfully!', 'success');
-  elements.contactForm.reset();
-  
-  // In a real implementation, you would send this to a server
-  console.log('Form submitted:', data);
+  try {
+    const response = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+    
+    const result = await response.json();
+    
+    if (result.success) {
+      showNotification('Message sent successfully!');
+      elements.contactForm.reset();
+    } else {
+      throw new Error('Message failed');
+    }
+  } catch (error) {
+    showNotification('Message sending failed. Please try again.', 'error');
+  }
 }
 
 // Cart rendering
@@ -266,18 +275,82 @@ function checkout() {
     return;
   }
   
-  // In a real implementation, this would redirect to a checkout page
-  showNotification('Redirecting to checkout...', 'success');
-  console.log('Checkout:', cart);
+  const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0).toFixed(2);
   
-  // For demo purposes, clear cart after "checkout"
-  setTimeout(() => {
-    cart = [];
-    updateCartCount();
-    renderCart();
-    saveCartToStorage();
-    closeCart();
-  }, 2000);
+  document.getElementById('cart-body').innerHTML = `
+    <div style="padding: 2rem;">
+      <h3>Order Summary</h3>
+      ${cart.map(item => `
+        <div style="display: flex; justify-content: space-between; padding: 1rem 0; border-bottom: 1px solid #e8eef3;">
+          <span>${item.name} × ${item.quantity}</span>
+          <span>$${(item.price * item.quantity).toFixed(2)}</span>
+        </div>
+      `).join('')}
+      <div style="display: flex; justify-content: space-between; padding: 1rem 0; font-weight: bold; font-size: 1.2rem;">
+        <span>Total:</span>
+        <span>$${total}</span>
+      </div>
+      <form id="checkout-form" style="margin-top: 2rem;">
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" name="name" required>
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label>Phone</label>
+          <input type="tel" name="phone" required>
+        </div>
+        <div class="form-group">
+          <label>Delivery Address</label>
+          <textarea name="address" required></textarea>
+        </div>
+        <button type="submit" class="btn-add">Place Order</button>
+      </form>
+    </div>
+  `;
+  
+  document.getElementById('checkout-form').addEventListener('submit', handleCheckout);
+}
+
+async function handleCheckout(e) {
+  e.preventDefault();
+  const formData = new FormData(e.target);
+  const orderData = {
+    customer: {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      phone: formData.get('phone'),
+      address: formData.get('address')
+    },
+    items: cart,
+    total: cart.reduce((sum, item) => sum + (item.price * item.quantity), 0).toFixed(2),
+    orderId: 'ORD-' + Date.now()
+  };
+  
+  try {
+    const response = await fetch('/api/order', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(orderData)
+    });
+    
+    const result = await response.json();
+    
+    if (result.success) {
+      showNotification('Order placed successfully! Order ID: ' + orderData.orderId);
+      cart = [];
+      updateCartCount();
+      closeCart();
+      e.target.reset();
+    } else {
+      throw new Error('Order failed');
+    }
+  } catch (error) {
+    showNotification('Order processing failed. Please try again.', 'error');
+  }
 }
 
 // Initialize everything when DOM is ready
