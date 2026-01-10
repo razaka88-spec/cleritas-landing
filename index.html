@@ -80,7 +80,7 @@
           <h3>Women's Folic Acid + Pregnancy</h3>
           <p>Essential prenatal support with folic acid for healthy fetal development and pregnancy wellness.</p>
           <span class="product-price">$24.99</span>
-          <button class="btn-add">Add to Cart</button>
+          <button class="btn-add" data-en="Add to Cart" data-so="Ku Dhufo">Add to Cart</button>
         </div>
       </div>
 
@@ -97,7 +97,7 @@
           <h3>Iron + Vitamin C</h3>
           <p>Boost iron absorption with vitamin C. Perfect for energy and immune system support.</p>
           <span class="product-price">$18.99</span>
-          <button class="btn-add">Add to Cart</button>
+          <button class="btn-add" data-en="Add to Cart" data-so="Ku Dhufo">Add to Cart</button>
         </div>
       </div>
 
@@ -114,7 +114,7 @@
           <h3>General Multivitamin</h3>
           <p>Complete daily nutrition with essential vitamins and minerals for overall health.</p>
           <span class="product-price">$16.99</span>
-          <button class="btn-add">Add to Cart</button>
+          <button class="btn-add" data-en="Add to Cart" data-so="Ku Dhufo">Add to Cart</button>
         </div>
       </div>
 
@@ -131,7 +131,7 @@
           <h3>Children's Chewable Vitamins</h3>
           <p>Tasty chewable multivitamins designed for children's growth and development.</p>
           <span class="product-price">$14.99</span>
-          <button class="btn-add">Add to Cart</button>
+          <button class="btn-add" data-en="Add to Cart" data-so="Ku Dhufo">Add to Cart</button>
         </div>
       </div>
     </div>
@@ -194,16 +194,21 @@
       <div class="contact-form">
         <form id="contact-form" aria-labelledby="contact-form-heading">
           <h3 id="contact-form-heading" class="sr-only">Send us a message</h3>
-          <label for="contact-name">Full Name</label>
-          <input type="text" id="contact-name" name="name" required>
-
-          <label for="contact-email">Email</label>
-          <input type="email" id="contact-email" name="email" required>
-
-          <label for="contact-message">Message</label>
-          <textarea id="contact-message" name="message" required></textarea>
-
-          <button type="submit" class="btn-add">Send Message</button>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contact-name" data-en="Full Name" data-so="Magac Magac">Full Name</label>
+              <input type="text" id="contact-name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="contact-email" data-en="Email" data-so="Email">Email</label>
+              <input type="email" id="contact-email" name="email" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="contact-message" data-en="Message" data-so="Farriin">Message</label>
+            <textarea id="contact-message" name="message" rows="6" required></textarea>
+          </div>
+          <button type="submit" class="btn-add" data-en="Send Message" data-so="Diris Farriin">Send Message</button>
         </form>
       </div>
     </div>
@@ -219,8 +224,7 @@
 
     <p style="margin-top:0.5rem;">
       <a href="mailto:info@cleritaspharma.com">info@cleritaspharma.com</a> ·
-      <a href="mailto:orders@cleritaspharma.com">orders@cleritaspharma.com</a> ·
-      <a href="mailto:ab@cleritaspharma.com">ab@cleritaspharma.com</a>
+      <a href="mailto:orders@cleritaspharma.com">orders@cleritaspharma.com</a>
     </p>
 
     <p style="margin-top:0.5rem;">

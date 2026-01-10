@@ -38,25 +38,34 @@ const elements = {
 
 // Language toggle functionality
 function initLanguageToggle() {
-  elements.langButtons.forEach(btn => {
+  const buttons = document.querySelectorAll('.lang-toggle button');
+  const translatableElements = document.querySelectorAll('[data-en][data-so]');
+  
+  buttons.forEach(btn => {
     btn.addEventListener('click', () => {
-      // Update active state
-      elements.langButtons.forEach(b => {
-        b.classList.remove('active');
-        b.setAttribute('aria-pressed', 'false');
-      });
-      btn.classList.add('active');
-      btn.setAttribute('aria-pressed', 'true');
+      const lang = btn.dataset.lang;
+      currentLang = lang;
       
-      // Update language
-      currentLang = btn.id.split('-')[0];
-      updateLanguage();
+      // Update button states
+      buttons.forEach(b => {
+        b.classList.toggle('active', b.dataset.lang === lang);
+        b.setAttribute('aria-pressed', b.dataset.lang === lang);
+      });
+      
+      // Update all translatable elements
+      translatableElements.forEach(el => {
+        el.textContent = el.dataset[lang];
+      });
+      
+      // Save preference
+      localStorage.setItem('language', lang);
     });
   });
 }
 
 function updateLanguage() {
-  $$('[data-en]').forEach(el => {
+  const translatableElements = document.querySelectorAll('[data-en]');
+  translatableElements.forEach(el => {
     if (el.dataset[currentLang]) {
       el.textContent = el.dataset[currentLang];
     }
@@ -356,7 +365,15 @@ async function handleCheckout(e) {
 // Initialize everything when DOM is ready
 function init() {
   loadCartFromStorage();
+  
+  // Load saved language
+  const savedLang = localStorage.getItem('language');
+  if (savedLang && ['en', 'so'].includes(savedLang)) {
+    currentLang = savedLang;
+  }
+  
   initLanguageToggle();
+  updateLanguage();
   initCart();
   initContactForm();
 }
