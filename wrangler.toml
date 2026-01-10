@@ -1,5 +1,8 @@
 name = "cleritas-landing"
 compatibility_date = "2024-01-01"
 
+[assets]
+directory = "."
+
 [env.production]
 vars = { RESEND_API_KEY = "your-resend-api-key" }
