@@ -4,10 +4,10 @@ let currentLang = 'en';
 
 // Product catalog
 const products = {
-  '1': { name: "Women's Folic Acid + Pregnancy", price: 24.99 },
-  '2': { name: "Iron + Vitamin C", price: 18.99 },
-  '3': { name: "General Multivitamin", price: 16.99 },
-  '4': { name: "Children's Chewable Vitamins", price: 14.99 }
+  '1': { name: "Women's Folic Acid + Pregnancy", nameSo: "Folic Acid Dumar + Jir", price: 24.99 },
+  '2': { name: "Iron + Vitamin C", nameSo: "Birta + Fiitamina C", price: 18.99 },
+  '3': { name: "General Multivitamin", nameSo: "Multivitamin Guud", price: 16.99 },
+  '4': { name: "Children's Chewable Vitamins", nameSo: "Fiitaminoyin Carruur ah oo La Cunno", price: 14.99 }
 };
 
 // Utility functions
@@ -103,7 +103,8 @@ function handleAddToCart(e) {
   
   const id = card.dataset.id;
   const price = parseFloat(card.dataset.price);
-  const name = card.querySelector('h3').textContent;
+  const product = products[id];
+  const name = currentLang === 'so' ? product.nameSo : product.name;
   
   const existing = cart.find(item => item.id === id);
   if (existing) {
@@ -113,7 +114,7 @@ function handleAddToCart(e) {
   }
   
   updateCartCount();
-  showNotification('Added to cart');
+  showNotification(currentLang === 'so' ? 'Waa lagu daray shandadan' : 'Added to cart');
   
   // Save to localStorage for persistence
   saveCartToStorage();
@@ -230,7 +231,7 @@ function renderCart() {
   if (!body) return;
   
   if (cart.length === 0) {
-    body.innerHTML = '<p class="empty-cart">Your cart is empty</p>';
+    body.innerHTML = `<p class="empty-cart">${currentLang === 'so' ? 'Shantaadu waa madhan' : 'Your cart is empty'}</p>`;
     return;
   }
   
@@ -252,9 +253,9 @@ function renderCart() {
       </div>
     `).join('')}
     <div class="cart-total">
-      <strong>Total: $${total.toFixed(2)}</strong>
+      <strong>${currentLang === 'so' ? 'Wadarta:' : 'Total:'} $${total.toFixed(2)}</strong>
     </div>
-    <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+    <button class="checkout-btn" onclick="checkout()">${currentLang === 'so' ? 'Soo gudbi order' : 'Proceed to Checkout'}</button>
   `;
 }
 

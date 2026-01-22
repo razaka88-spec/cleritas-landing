@@ -28,7 +28,7 @@ Total: $${data.total}
       },
       body: JSON.stringify({
         from: 'orders@cleritaspharma.com',
-        to: ['orders@cleritaspharma.com'],
+        to: ['info@cleritaspharma.com'],
         subject: `New Order ${data.orderId}`,
         html: `<pre>${emailBody}</pre>`
       })
