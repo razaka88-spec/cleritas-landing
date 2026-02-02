@@ -6,11 +6,11 @@
   <meta name="description" content="Professional vitamins: Women's Folic Acid & Pregnancy Support, Iron + Vitamin C, General Multivitamin, and Children's Chewable Vitamins. Clear-labeled, pharmaceutical-grade supplements.">
   <meta name="keywords" content="vitamins, supplements, folic acid, iron, multivitamin, children's vitamins, pharmaceutical grade, clear labeled">
   <meta name="author" content="Cleritas Pharma">
-  <meta property="og:title" content="Cleritas Pharma - Clear Labeled Vitamins">
+  <meta property="og:title" content="Cleritas Pharma - Professional Vitamin Solutions">
   <meta property="og:description" content="Professional vitamin solutions for women, families, and children. Pharmaceutical-grade supplements with transparent labeling.">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <title>Cleritas Pharma - Clear Labeled Vitamins</title>
+  <title>Cleritas Pharma - Professional Vitamin Solutions</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,78 +20,239 @@
 <a href="#main" class="skip-link">Skip to main content</a>
 
 <header role="banner">
-  <div class="container header-container">
-    <div class="logo" role="img" aria-label="Cleritas Pharma Logo">
-      <span class="logo-text">CP</span>
-    </div>
-    <nav role="navigation" aria-label="Main navigation">
-      <ul>
-        <li><a href="#home" data-en="Home" data-so="Guriga">Home</a></li>
-        <li><a href="#products" data-en="Products" data-so="Alaabta">Products</a></li>
-        <li><a href="#about" data-en="About" data-so="Ku Saabsan">About</a></li>
-        <li><a href="#contact" data-en="Contact" data-so="Xiriir">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="header-actions">
-      <div class="lang-toggle" role="group" aria-label="Language selection">
-        <button id="en-btn" class="active" aria-pressed="true" aria-label="English">EN</button>
-        <button id="so-btn" aria-pressed="false" aria-label="Somali">SO</button>
+  <div class="header-top">
+    <div class="container">
+      <div class="trust-badges">
+        <span class="badge" data-en="Licensed Pharmacy" data-so="Rakibaadka Dawooyada">Licensed Pharmacy</span>
+        <span class="badge" data-en="Quality Guaranteed" data-so="Dhinac Tayay">Quality Guaranteed</span>
+        <span class="badge" data-en="Fast Delivery" data-so="Deg Deg Soo Deji">Fast Delivery</span>
       </div>
-      <button class="cart-btn" id="open-cart" aria-label="Shopping cart with 0 items">
-        <span data-en="Cart" data-so="Shanta">Cart</span>
-        <span class="cart-count" id="cart-count" aria-live="polite">0</span>
-      </button>
+      <div class="header-actions">
+        <div class="lang-toggle" role="group" aria-label="Language selection">
+          <button id="en-btn" class="active" aria-pressed="true" aria-label="English">EN</button>
+          <button id="so-btn" aria-pressed="false" aria-label="Somali">SO</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="header-main">
+    <div class="container">
+      <div class="logo" role="img" aria-label="Cleritas Pharma Logo">
+        <span class="logo-text">CP</span>
+        <span class="logo-full" data-en="Cleritas Pharma" data-so="Cleritas Pharma">Cleritas Pharma</span>
+      </div>
+      
+      <div class="search-bar">
+        <input type="search" placeholder="Search vitamins..." data-placeholder-so="Raadi fiitaminoyin...">
+        <button type="submit" aria-label="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.35-4.35"></path>
+          </svg>
+        </button>
+      </div>
+      
+      <div class="header-actions-main">
+        <button class="cart-btn" id="open-cart" aria-label="Shopping cart with 0 items">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span data-en="Cart" data-so="Shanta">Cart</span>
+          <span class="cart-count" id="cart-count" aria-live="polite">0</span>
+        </button>
+      </div>
     </div>
   </div>
 </header>
 
+<nav role="navigation" aria-label="Main navigation">
+  <div class="container">
+    <ul class="nav-menu">
+      <li><a href="#home" data-en="Home" data-so="Guriga">Home</a></li>
+      <li><a href="#products" data-en="Products" data-so="Alaabta">Products</a></li>
+      <li><a href="#categories" data-en="Categories" data-so="Qaybaha">Categories</a></li>
+      <li><a href="#about" data-en="About" data-so="Ku Saabsan">About</a></li>
+      <li><a href="#contact" data-en="Contact" data-so="Xiriir">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="main">
 <section class="hero" id="home" role="banner">
-  <div class="hero-container">
-    <div class="hero-text">
-      <h1 data-en="Clear, Trusted Vitamins for Everyone" data-so="Fiitamiino Cad oo La Aaminsan Karo Dhammaan Dadka">
-        <strong>Clear, Trusted Vitamins</strong><br>for Everyone
-      </h1>
-      <p>
-        Professional vitamin solutions for women, families, and children.
-        Our goal is transparency, trust, and health through pharmaceutical-grade supplements.
-      </p>
-      <button class="cta-btn" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})" aria-label="Shop our vitamin products">
-        Shop Now
-      </button>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 data-en="Professional Vitamin Solutions for Your Health" data-so="Xirmooyin Fiitamiin oo Ahfaynta Waalidka iyo Carruurta">
+          <strong data-en="Professional Vitamin Solutions" data-so="Xirmooyin Fiitamiin oo Profishanal">Professional Vitamin Solutions</strong><br>
+          <span data-en="for Your Health" data-so="Ahfaynta Waalidka iyo Carruurta">for Your Health</span>
+        </h1>
+        <p data-en="Pharmaceutical-grade vitamins with transparent labeling. Trusted by healthcare professionals and families across the region." data-so="Fiitamiino oo heer darajada dawooyada ah oo leh calaamad cad. La aaminsan yahay kuwa shaqada caafimaadka iyo qoysaska gobolka oo dhan.">
+          Pharmaceutical-grade vitamins with transparent labeling. Trusted by healthcare professionals and families across the region.
+        </p>
+        <div class="hero-stats">
+          <div class="stat">
+            <strong>50K+</strong>
+            <span data-en="Happy Customers" data-so="Muwaadiniin Farxad Leh">Happy Customers</span>
+          </div>
+          <div class="stat">
+            <strong>98%</strong>
+            <span data-en="Satisfaction Rate" data-so">Satisfaction Rate</span>
+          </div>
+          <div class="stat">
+            <strong>24/7</strong>
+            <span data-en="Support" data-so="Taageero">Support</span>
+          </div>
+        </div>
+        <button class="cta-btn" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})" aria-label="Shop our vitamin products">
+          <span data-en="Shop Now" data-so="Iibso Hada">Shop Now</span>
+        </button>
+      </div>
+      <div class="hero-image">
+        <div class="product-showcase">
+          <div class="showcase-product showcase-1">
+            <div class="bottle bottle-blue"></div>
+            <span data-en="Folic Acid" data-so="Folic Acid">Folic Acid</span>
+          </div>
+          <div class="showcase-product showcase-2">
+            <div class="bottle bottle-orange"></div>
+            <span data-en="Iron + C" data-so="Birta + C">Iron + C</span>
+          </div>
+          <div class="showcase-product showcase-3">
+            <div class="bottle bottle-green"></div>
+            <span data-en="Multivitamin" data-so="Multivitamin">Multivitamin</span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<main id="main">
+<section id="categories" aria-labelledby="categories-heading">
+  <div class="container">
+    <h2 id="categories-heading" data-en="Shop by Category" data-so="Iibso Qaybaha">Shop by Category</h2>
+    <div class="category-grid">
+      <div class="category-card" data-category="women">
+        <div class="category-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
+          </svg>
+        </div>
+        <h3 data-en="Women's Health" data-so="Caafimaadka Dumarada">Women's Health</h3>
+        <p data-en="Prenatal and women's specific vitamins" data-so="Fiitamiino ee uurka iyo dumarada gaarka ah">Prenatal and women's specific vitamins</p>
+        <button class="category-btn" data-en="Shop Women's" data-so="Iibso Dumarada">Shop Women's</button>
+      </div>
+      
+      <div class="category-card" data-category="general">
+        <div class="category-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="9" y1="9" x2="15" y2="9"></line>
+            <line x1="9" y1="15" x2="15" y2="15"></line>
+          </svg>
+        </div>
+        <h3 data-en="General Health" data-so="Caafimaadka Guud">General Health</h3>
+        <p data-en="Daily multivitamins and supplements" data-so="Fiitamiino maalin ah iyo waxyaabaha kale">Daily multivitamins and supplements</p>
+        <button class="category-btn" data-en="Shop General" data-so="Iibso Guud">Shop General</button>
+      </div>
+      
+      <div class="category-card" data-category="children">
+        <div class="category-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+        </div>
+        <h3 data-en="Children's Health" data-so="Caafimaadka Carruurta">Children's Health</h3>
+        <p data-en="Chewable vitamins for kids" data-so="Fiitamiino la cuno ee carruurta">Chewable vitamins for kids</p>
+        <button class="category-btn" data-en="Shop Kids" data-so="Iibso Carruurta">Shop Kids</button>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="products" aria-labelledby="products-heading">
   <div class="container">
-    <h2 id="products-heading">Our Products</h2>
+    <div class="section-header">
+      <h2 id="products-heading" data-en="All Products" data-so="Dhammaan Alaabta">All Products</h2>
+      <div class="product-filters">
+        <button class="filter-btn active" data-filter="all" data-en="All" data-so="Dhammaan">All</button>
+        <button class="filter-btn" data-filter="women" data-en="Women" data-so="Dumar">Women</button>
+        <button class="filter-btn" data-filter="general" data-en="General" data-so="Guud">General</button>
+        <button class="filter-btn" data-filter="children" data-en="Children" data-so="Carruur">Children</button>
+      </div>
+    </div>
+    
     <div class="product-grid">
       <div class="product-card show" data-id="1" data-price="24.99" data-category="women">
+        <div class="product-badges">
+          <span class="badge badge-best" data-en="Best Seller" data-so="Ugu Wanaagsan">Best Seller</span>
+        </div>
         <div class="product-image">
           <div class="bottle-container">
             <div class="bottle bottle-blue"></div>
           </div>
         </div>
         <div class="product-info">
+          <div class="product-meta">
+            <span class="category-tag" data-en="Women's Health" data-so="Caafimaadka Dumarada">Women's Health</span>
+            <div class="rating">
+              <span class="stars">★★★★★</span>
+              <span class="count">(245)</span>
+            </div>
+          </div>
           <h3 data-en="Women's Folic Acid + Pregnancy" data-so="Folic Acid Dumar + Jir">Women's Folic Acid + Pregnancy</h3>
           <p data-en="Essential prenatal support with folic acid for healthy fetal development and pregnancy wellness." data-so="Taageero muhiim ah oo dumar ah oo leh folic acid si loo horumariyo horumarinta ilmahayga iyo caafimaadka uurka.">Essential prenatal support with folic acid for healthy fetal development and pregnancy wellness.</p>
-          <span class="product-price">$24.99</span>
-          <button class="btn-add" data-en="Add to Cart" data-so="Ku Dhufo">Add to Cart</button>
+          <div class="product-details">
+            <ul>
+              <li data-en="800mcg Folic Acid" data-so="Folic Acid 800mcg">800mcg Folic Acid</li>
+              <li data-en="Iron & Vitamin D" data-so="Birta & Fiitamina D">Iron & Vitamin D</li>
+              <li data-en="30 Tablets" data-so="30 Tablet">30 Tablets</li>
+            </ul>
+          </div>
+          <div class="product-price-row">
+            <div class="price">
+              <span class="current">$24.99</span>
+              <span class="original">$29.99</span>
+            </div>
+            <button class="btn-add" data-en="Add to Cart" data-so="Ku Dhufo">Add to Cart</button>
+          </div>
         </div>
       </div>
 
       <div class="product-card show" data-id="2" data-price="18.99" data-category="general">
+        <div class="product-badges">
+          <span class="badge badge-new" data-en="New" data-so="Cusub">New</span>
+        </div>
         <div class="product-image">
           <div class="bottle-container">
             <div class="bottle bottle-orange"></div>
           </div>
         </div>
         <div class="product-info">
+          <div class="product-meta">
+            <span class="category-tag" data-en="General Health" data-so="Caafimaadka Guud">General Health</span>
+            <div class="rating">
+              <span class="stars">★★★★☆</span>
+              <span class="count">(189)</span>
+            </div>
+          </div>
           <h3 data-en="Iron + Vitamin C" data-so="Birta + Fiitamina C">Iron + Vitamin C</h3>
           <p data-en="Boost iron absorption with vitamin C. Perfect for energy and immune system support." data-so="Kordhi soo dejinta birta ee fiitamina C. Wanaagsan waxaana loo isticmaalaa awoodda iyo taageerada nolosha.">Boost iron absorption with vitamin C. Perfect for energy and immune system support.</p>
-          <span class="product-price">$18.99</span>
-          <button class="btn-add" data-en="Add to Cart" data-so="Ku Dhufo">Add to Cart</button>
+          <div class="product-details">
+            <ul>
+              <li data-en="25mg Iron" data-so="Birta 25mg">25mg Iron</li>
+              <li data-en="500mg Vitamin C" data-so="Fiitamina C 500mg">500mg Vitamin C</li>
+              <li data-en="60 Capsules" data-so="60 Kapsul">60 Capsules</li>
+            </ul>
+          </div>
+          <div class="product-price-row">
+            <div class="price">
+              <span class="current">$18.99</span>
+            </div>
+            <button class="btn-add" data-en="Add to Cart" data-so="Ku Dhufo">Add to Cart</button>
+          </div>
         </div>
       </div>
 
@@ -102,24 +263,64 @@
           </div>
         </div>
         <div class="product-info">
+          <div class="product-meta">
+            <span class="category-tag" data-en="General Health" data-so="Caafimaadka Guud">General Health</span>
+            <div class="rating">
+              <span class="stars">★★★★★</span>
+              <span class="count">(412)</span>
+            </div>
+          </div>
           <h3 data-en="General Multivitamin" data-so="Multivitamin Guud">General Multivitamin</h3>
           <p data-en="Complete daily nutrition with essential vitamins and minerals for overall health." data-so="Cunto maalin ah oo dhan oo leh fiitaminoyin iyaanah macdano muhiim ah oo loo isticmaalo caafimaadka guud.">Complete daily nutrition with essential vitamins and minerals for overall health.</p>
-          <span class="product-price">$16.99</span>
-          <button class="btn-add" data-en="Add to Cart" data-so="Ku Dhufo">Add to Cart</button>
+          <div class="product-details">
+            <ul>
+              <li data-en="26 Essential Nutrients" data-so="26 Nooto Muhiim ah">26 Essential Nutrients</li>
+              <li data-en="Once Daily" data-so="Maalinta hal mar">Once Daily</li>
+              <li data-en="90 Tablets" data-so="90 Tablet">90 Tablets</li>
+            </ul>
+          </div>
+          <div class="product-price-row">
+            <div class="price">
+              <span class="current">$16.99</span>
+            </div>
+            <button class="btn-add" data-en="Add to Cart" data-so="Ku Dhufo">Add to Cart</button>
+          </div>
         </div>
       </div>
 
       <div class="product-card show" data-id="4" data-price="14.99" data-category="children">
+        <div class="product-badges">
+          <span class="badge badge-popular" data-en="Popular" data-so="Caan ah">Popular</span>
+        </div>
         <div class="product-image">
           <div class="bottle-container">
             <div class="bottle bottle-red"></div>
           </div>
         </div>
         <div class="product-info">
+          <div class="product-meta">
+            <span class="category-tag" data-en="Children's Health" data-so="Caafimaadka Carruurta">Children's Health</span>
+            <div class="rating">
+              <span class="stars">★★★★★</span>
+              <span class="count">(523)</span>
+            </div>
+          </div>
           <h3 data-en="Children's Chewable Vitamins" data-so="Fiitaminoyin Carruur ah oo La Cunno">Children's Chewable Vitamins</h3>
           <p data-en="Tasty chewable multivitamins designed for children's growth and development." data-so="Fiitaminoyin macaan oo la cuno oo loo qabtay si loo horumariyo koboca iyo horumarka carruurta.">Tasty chewable multivitamins designed for children's growth and development.</p>
-          <span class="product-price">$14.99</span>
-          <button class="btn-add" data-en="Add to Cart" data-so="Ku Dhufo">Add to Cart</button>
+          <div class="product-details">
+            <ul>
+              <li data-en="Fruit Flavored" data-so="Midhaha leh noocyo kala duwan">Fruit Flavored</li>
+              <li data-en="Ages 4-12" data-so="Da'da 4-12">Ages 4-12</li>
+              <li data-en="60 Gummies" data-so="60 Gummies">60 Gummies</li>
+            </ul>
+          </div>
+          <div class="product-price-row">
+            <div class="price">
+              <span class="current">$14.99</span>
+              <span class="original">$17.99</span>
+            </div>
+            <button class="btn-add" data-en="Add to Cart" data-so="Ku Dhufo">Add to Cart</button>
+          </div>
         </div>
       </div>
     </div>
@@ -130,44 +331,105 @@
 <div id="cart-modal" class="modal" role="dialog" aria-labelledby="cart-heading">
   <div class="modal-content">
     <div class="modal-header">
-      <h2 id="cart-heading">Shopping Cart</h2>
+      <h2 id="cart-heading" data-en="Shopping Cart" data-so="Shandada">Shopping Cart</h2>
       <button class="close-modal" id="close-cart" aria-label="Close cart">&times;</button>
     </div>
     <div class="modal-body" id="cart-body">
-      <p class="empty-cart">Your cart is empty</p>
+      <p class="empty-cart" data-en="Your cart is empty" data-so="Shantaadu waa madhan">Your cart is empty</p>
     </div>
   </div>
 </div>
 
 <section id="about" aria-labelledby="about-heading">
-  <div class="container about-content">
-    <h2 id="about-heading">About Cleritas Pharma</h2>
-    <p>
-      We provide clear-labeled vitamins for women, families, and children.
-      Our products are developed with transparency, trust, and pharmaceutical standards in mind.
-    </p>
+  <div class="container">
+    <div class="about-content">
+      <h2 id="about-heading" data-en="About Cleritas Pharma" data-so="Ku Saabsan Cleritas Pharma">About Cleritas Pharma</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p data-en="We provide pharmaceutical-grade vitamins with transparent labeling for women, families, and children. Our products are developed with the highest standards of quality, safety, and efficacy." data-so="Waxaan bixinaa fiitamiino oo heer darajada dawooyada ah oo leh calaamad cad oo loogu talagalay dumarada, qoysaska, iyo carruurta. Alaabteennuna waxaa lagu sameeyay heerka ugu sarreeya ee tayada, amniga, ka fayideysiga.">
+            We provide pharmaceutical-grade vitamins with transparent labeling for women, families, and children. Our products are developed with the highest standards of quality, safety, and efficacy.
+          </p>
+          <div class="about-features">
+            <div class="feature">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <span data-en="Quality Certified" data-so="Lambarka Tayada">Quality Certified</span>
+            </div>
+            <div class="feature">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+              <span data-en="Clinically Tested" data-so="Imtixaanka Caafimaadka">Clinically Tested</span>
+            </div>
+            <div class="feature">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+              <span data-en="Fast Shipping" data-so="Deg Deg Soo Deji">Fast Shipping</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-stats">
+          <div class="stat-item">
+            <strong>15+</strong>
+            <span data-en="Years Experience" data-so="Sanadood Waayo-aragnimo">Years Experience</span>
+          </div>
+          <div class="stat-item">
+            <strong>100%</strong>
+            <span data-en="Natural Ingredients" data-so="Dhadhaan Asal ah">Natural Ingredients</span>
+          </div>
+          <div class="stat-item">
+            <strong>50K+</strong>
+            <span data-en="Happy Customers" data-so="Muwaadiniin Farxad Leh">Happy Customers</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
 <section id="contact" aria-labelledby="contact-heading">
   <div class="container">
-    <h2 id="contact-heading">Contact Us</h2>
-
+    <h2 id="contact-heading" data-en="Contact Us" data-so="Nala Noo Xiriir">Contact Us</h2>
     <div class="contact-grid">
       <div class="contact-info">
         <h3 data-en="Get in Touch" data-so="Nala Soo Xiriir">Get in Touch</h3>
         <p data-en="For all inquiries, orders, and support, please contact us:" data-so="Wax kasta oo aad weydiiso, amar ah, iyo taageero, fadlan nala soo xiriir:">For all inquiries, orders, and support, please contact us:</p>
         
-        <p style="margin-top:0.75rem;">
-          <strong data-en="Email" data-so="Email">Email</strong><br>
-          <a href="mailto:info@cleritaspharma.com">info@cleritaspharma.com</a>
-        </p>
+        <div class="contact-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          <div>
+            <strong data-en="Email" data-so="Email">Email</strong><br>
+            <a href="mailto:info@cleritaspharma.com">info@cleritaspharma.com</a>
+          </div>
+        </div>
 
-        <p style="margin-top:1.5rem;">
-          <strong data-en="Business Hours" data-so="Saacadaha Shaqada">Business Hours</strong><br>
-          <span data-en="Monday – Friday: 09:00 – 17:00" data-so="Isniin – Jimco: 09:00 – 17:00">Monday – Friday: 09:00 – 17:00</span><br>
-          <span data-en="Saturday – Sunday: Closed" data-so="Sabti – Axad: Xiray">Saturday – Sunday: Closed</span>
-        </p>
+        <div class="contact-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          <div>
+            <strong data-en="Phone" data-so="Telefoon">Phone</strong><br>
+            <span data-en="Mon-Fri: 9AM-5PM" data-so="Isniin-Jimco: 9AM-5PM">Mon-Fri: 9AM-5PM</span>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          <div>
+            <strong data-en="Location" data-so="Goobta">Location</strong><br>
+            <span data-en="Mogadishu, Somalia" data-so="Muqdisho, Soomaaliya">Mogadishu, Somalia</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -176,17 +438,48 @@
 
 <footer role="contentinfo">
   <div class="container">
-    <p>
-      <strong>Cleritas Pharma</strong> – Professional Vitamin Solutions
-    </p>
-
-    <p style="margin-top:0.5rem;">
-      <a href="mailto:info@cleritaspharma.com">info@cleritaspharma.com</a>
-    </p>
-
-    <p style="margin-top:0.5rem;">
-      © 2025 Cleritas Pharma. All rights reserved.
-    </p>
+    <div class="footer-content">
+      <div class="footer-section">
+        <div class="footer-logo">
+          <span class="logo-text">CP</span>
+          <span class="logo-full">Cleritas Pharma</span>
+        </div>
+        <p data-en="Professional vitamin solutions for your health and wellness." data-so="Xirmooyin fiitamiin oo profishanal ah oo loogu talagalay caafimaadka iyo wanaaggaaga.">Professional vitamin solutions for your health and wellness.</p>
+      </div>
+      
+      <div class="footer-section">
+        <h4 data-en="Quick Links" data-so="Xiriirrooyin Deg Deg ah">Quick Links</h4>
+        <ul>
+          <li><a href="#products" data-en="Products" data-so="Alaabta">Products</a></li>
+          <li><a href="#about" data-en="About" data-so="Ku Saabsan">About</a></li>
+          <li><a href="#contact" data-en="Contact" data-so="Xiriir">Contact</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4 data-en="Customer Service" data-so="Adeegga Macaamiisha">Customer Service</h4>
+        <ul>
+          <li><a href="#" data-en="Shipping Info" data-so="Macluumaadka Dhoofinta">Shipping Info</a></li>
+          <li><a href="#" data-en="Returns" data-so="La Celceli">Returns</a></li>
+          <li><a href="#" data-en="FAQ" data-so="Su'aalo La Istaahilay">FAQ</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4 data-en="Legal" data-so="Sharciga">Legal</h4>
+        <ul>
+          <li><a href="#" data-en="Privacy Policy" data-so="Siyaasada Gaarka ah">Privacy Policy</a></li>
+          <li><a href="#" data-en="Terms of Service" data-so="Shuruudaha Adeegga">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 Cleritas Pharma. <span data-en="All rights reserved." data-so="Xaqool kasta waa la ilaaliyaa.">All rights reserved.</span></p>
+      <p>
+        <a href="mailto:info@cleritaspharma.com">info@cleritaspharma.com</a>
+      </p>
+    </div>
   </div>
 </footer>
 
